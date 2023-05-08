@@ -2,7 +2,7 @@ const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
-class interest extends Model {}
+class biography extends Model {}
 
 interest.init(
   {
@@ -15,7 +15,6 @@ interest.init(
    
     interest: {
         type: DataTypes.INTEGER,
-        allowNull: false,
         
   },
   
@@ -27,4 +26,4 @@ interest.init(
   }
 );
 
-module.exports = interest;
+module.exports = biography;

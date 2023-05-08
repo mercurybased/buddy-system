@@ -2,9 +2,9 @@ const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
-class interest extends Model {}
+class location extends Model {}
 
-interest.init(
+location.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -13,18 +13,16 @@ interest.init(
       autoIncrement: true,
     },
    
-    interest: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        
+    location: {
+        // type
   },
   
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'interest',
+    modelName: 'location',
   }
 );
 
-module.exports = interest;
+module.exports = location;
