@@ -4,7 +4,7 @@ const sequelize = require('../config/connection');
 
 class biography extends Model {}
 
-interest.init(
+biography.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -13,8 +13,8 @@ interest.init(
       autoIncrement: true,
     },
    
-    interest: {
-        type: DataTypes.INTEGER,
+    biography: {
+        type: DataTypes.string
         
   },
   
