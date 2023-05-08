@@ -14,7 +14,7 @@ interest.init(
     },
    
     interest: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
         allowNull: false,
         
   },
