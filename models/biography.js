@@ -14,7 +14,7 @@ biography.init(
     },
    
     biography: {
-        type: DataTypes.string
+        type: DataTypes.STRING
         
   },
   
