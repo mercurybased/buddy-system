@@ -24,6 +24,14 @@ User.init(
         isEmail: true,
       },
     },
+    username: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: true,
+      validate: {
+        len: [5, 15],
+      },
+    },
     password: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -31,6 +39,38 @@ User.init(
         len: [8],
       },
     },
+    interest_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'interest',
+        key: 'id',
+      
+      }
+    },
+    location_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'location',
+        key: 'id',
+        
+      }
+    },
+    biography_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'biography',
+        key: 'id',
+        
+      }
+    },
+    image_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'image',
+        key: 'id',
+        
+      }
+    }
   },
   {
     hooks: {
