@@ -14,15 +14,14 @@ Biography.init(
     },
    
     biography: {
-        type: DataTypes.STRING
-        
-  },
-  
+        type: DataTypes.STRING        
+  }
+},{
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'interest',
+    modelName: 'biography'
   }
 );
 
