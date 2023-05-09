@@ -15,4 +15,4 @@ CREATE TABLE interest(
     user_intrerest VARCHAR(100) NOT NULL,
     
    
-);
+); 
