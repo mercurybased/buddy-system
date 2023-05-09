@@ -19,12 +19,7 @@
     "express-session": "^1.17.3",
     "inquirer": "^8.2.4",
     "mysql2": "^3.3.0",
-<<<<<<< HEAD
     "sequelize": "^6.3.5",
     "socket.io": "^4.6.1"
-    
-=======
-    "sequelize": "^6.3.5"
->>>>>>> dev
   }
 }
