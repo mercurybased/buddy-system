@@ -1,3 +1,29 @@
+
+const User = require('./user');
+// const Post = require('./Post');
+// const Comment = require('./Comments');
+
+
+// Post.belongsTo(User, {
+//   foreignKey: 'user_id',
+//   onDelete:"CASCADE"
+// });
+// Post.hasMany(Comment, {
+//   foreignKey: 'post_id',
+//   onDelete:"CASCADE"
+// });
+
+// Comment.belongsTo(User, {
+//   foreignKey: 'user_id',
+//   onDelete:"CASCADE"
+// });
+
+
+module.exports = { 
+  User, 
+  // Post, Comment 
+};
+
 const User = require('./User');
 const Interest = require('./Interest');
 // const Biography = require('./Biography');
@@ -6,23 +32,19 @@ const Interest = require('./Interest');
 
 
 User.hasMany(Interest, {
-  foreignKey: 'interest_id'
+  foreignKey: 'user_id'
 });
 Interest.belongsTo(User, {
   foreignKey: 'user_id'
 });
-
-// User.hasOne(Location)
-// Location.hasMany(User, {
-//     foreignKey: 'user_id'
-// })
 
 // User.hasOne(Biography)
 // Biography.belongsTo(User, {
 //   foreignKey: 'user_id'
 // });
 
-// User.hasOne(Image)
-// Image.hasMany(Users)
+// User.hasOne(Location)
 
-module.exports = { User, Interest};
+// User.hasOne(Image)
+
+module.exports = { User, Interest };

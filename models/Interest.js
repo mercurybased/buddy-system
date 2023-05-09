@@ -11,11 +11,17 @@ Interest.init(
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
-    },
-   
+    },   
     interest: {
         type: DataTypes.STRING,
         allowNull: false,
+    },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "User",
+        key: "id"
+      }
     }
   },{
   

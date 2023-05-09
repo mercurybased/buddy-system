@@ -1,0 +1,13 @@
+:root {
+    --lightest-beige:#F1EBE5;
+    --bg-light-beige-pink:#F8F3F2;
+    --bg-mushroomy-brown:#BEB4AA;
+    --txt-dark-brown:#69443C;
+    --navy: #30334B;
+    --bg-light-green: #CDCFC0;
+    --txt-green:#223D3C;
+}
+
+.card-body {
+    padding: 2px
+}
