@@ -25,3 +25,22 @@ app.use(routes);
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });
+
+
+const http = require('http').Server(app);
+const io = require('socket.io')(http);
+
+
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/index.html');
+});
+
+io.on('connection', (socket) => {
+  socket.on('chat message', msg => {
+    io.emit('chat message', msg);
+  });
+});
+
+http.listen(PORT, () => {
+  console.log(`Socket.IO server running at http://localhost:${PORT}/`);
+});
