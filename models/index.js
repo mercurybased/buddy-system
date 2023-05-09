@@ -1,4 +1,5 @@
 
+const User = require('./user');
 // const Post = require('./Post');
 // const Comment = require('./Comments');
 
@@ -18,7 +19,10 @@
 // });
 
 
-
+module.exports = { 
+  User, 
+  // Post, Comment 
+};
 
 const User = require('./User');
 const Interest = require('./Interest');
@@ -37,13 +41,13 @@ Interest.belongsTo(User, {
   foreignKey: 'user_id'
 });
 
-User.hasOne(Biography)
-Biography.belongsTo(User, {
-  foreignKey: 'user_id'
-});
+// User.hasOne(Biography)
+// Biography.belongsTo(User, {
+//   foreignKey: 'user_id'
+// });
 
 // User.hasOne(Location)
 
 // User.hasOne(Image)
 
-module.exports = { User, Interest, Biography};
+module.exports = { User, Interest };

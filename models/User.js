@@ -47,21 +47,8 @@ User.init(
         
       // }
     },
-    biography_id: {
-      type: DataTypes.INTEGER,
-      // references: {
-      //   model: 'biography',
-      //   key: 'id',
-        
-      // }
-    },
-    image_id: {
-      type: DataTypes.INTEGER,
-    //   references: {
-    //     model: 'image',
-    //     key: 'id',
-        
-    //   }
+    biography: {
+      type: DataTypes.TEXT
     }
   },
   {
