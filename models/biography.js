@@ -2,9 +2,9 @@ const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
-class biography extends Model {}
+class Biography extends Model {}
 
-biography.init(
+Biography.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -26,4 +26,4 @@ biography.init(
   }
 );
 
-module.exports = biography;
+module.exports = Biography;

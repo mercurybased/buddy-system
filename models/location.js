@@ -2,9 +2,9 @@ const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
-class location extends Model {}
+class Location extends Model {}
 
-location.init(
+Location.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -25,4 +25,4 @@ location.init(
   }
 );
 
-module.exports = location;
+module.exports = Location;
