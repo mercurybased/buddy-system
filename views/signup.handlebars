@@ -1,0 +1,120 @@
+<header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">ChinguTalk</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        {{#if logged_in}}
+                        <a class="nav-link dropdown-toggle" href="/profile" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Profile
+                        </a>
+                        <ul class="dropdown-menu">
+                            <button class="btn" type="submit" id="logout">Logout</button>
+                            <script src="/js/logout.js"></script>
+                            {{!-- <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li> --}}
+                        </ul>
+                        {{else}}
+                        <a class="nav-link" href="/profile">log in</a>
+                        {{/if}}
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled">Link</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<body>
+    <main style="background-color:#F8F3F2">
+        <div class="row">
+            <!-- left column -->
+            <div class="w-50 p-3">
+                <figure>
+                    <img src="../Assets/chingu_logo.png" alt="logo picture">
+                </figure>
+
+            </div>
+
+            <!-- right column -->
+            <div class="w-50 p-3">
+                <div class="card m-6" style="background-color:#BEB4AA; height:100%; align-items:center;">
+                    <div class="card-header">Sign Up</div>
+                    <div class="card-body">
+                        <form>
+                            <div class="row">
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="First name"
+                                        aria-label="First name">
+                                </div>
+
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="Last name"
+                                        aria-label="Last name">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="exampleFormControlInput1"
+                                    placeholder="name@example.com">
+                            </div>
+                            <div class="row g-3 align-items-center">
+                                <div class="col-auto">
+                                    <label for="inputPassword6" class="col-form-label">Password</label>
+                                </div>
+                                <div class="col-auto">
+                                    <input type="password" id="inputPassword6" class="form-control"
+                                        aria-labelledby="passwordHelpInline">
+                                </div>
+                                <div class="col-auto">
+                                    <span id="passwordHelpInline" class="form-text">
+                                        Must be 8-20 characters long.
+                                    </span>
+                                </div>
+                            </div>
+                            <label for="profile picture" class="form-label">Add a profile picture</label>
+                            <div class="input-group mb-3">
+                                <input type="file" class="form-control" id="inputGroupFile02">
+                                <label class="input-group-text" for="inputGroupFile02">Upload</label>
+                            </div>
+
+                            <div>
+                                <label for="exampleDataList" class="form-label">Search for an interest</label>
+                                <input class="form-control" list="datalistOptions" id="exampleDataList"
+                                    placeholder="Type to search...">
+                                <datalist id="datalistOptions">
+                                    <option value="San Francisco">
+                                    <option value="New York">
+                                    <option value="Seattle">
+                                    <option value="Los Angeles">
+                                    <option value="Chicago">
+                                </datalist>
+                            </div>
+                            <div>
+                            <button type="button" class="btn btn-outline-light">Complete Sign Up</button>
+                            </div>
+                        </form>
+                        <p><a href="login.handlebars" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Sign into an existing account</a></p>
+                    </div>
+                </div>
+            </div>
+</body>
