@@ -39,37 +39,29 @@ User.init(
         len: [8],
       },
     },
-    interest_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'interest',
-        key: 'id',
-      
-      }
-    },
     location_id: {
       type: DataTypes.INTEGER,
-      references: {
-        model: 'location',
-        key: 'id',
+      // references: {
+      //   model: 'location',
+      //   key: 'id',
         
-      }
+      // }
     },
     biography_id: {
       type: DataTypes.INTEGER,
-      references: {
-        model: 'biography',
-        key: 'id',
+      // references: {
+      //   model: 'biography',
+      //   key: 'id',
         
-      }
+      // }
     },
     image_id: {
       type: DataTypes.INTEGER,
-      references: {
-        model: 'image',
-        key: 'id',
+    //   references: {
+    //     model: 'image',
+    //     key: 'id',
         
-      }
+    //   }
     }
   },
   {
