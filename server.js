@@ -1,7 +1,11 @@
 const express = require('express');
 const session = require('express-session');
+<<<<<<< HEAD
+const http = require('http');
+=======
 const routes = require('./controllers');
 
+>>>>>>> dev
 const exphbs = require('express-handlebars');
 
 const sequelize = require('./config/connection');
@@ -28,6 +32,9 @@ const sess = {
 
 
 
+
+const server = http.createServer(app)
+const io = require('socket.io')(server);
 app.use(session(sess));
 
 app.use(express.json());
@@ -50,6 +57,10 @@ sequelize.sync({ force: false }).then(() =>
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
+<<<<<<< HEAD
+
+app.use(routes);
+=======
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });
@@ -62,19 +73,35 @@ const io = require('socket.io')(http);
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');
 });
+>>>>>>> dev
 
 io.on('connection', (socket) => {
   socket.on('chat message', msg => {
     io.emit('chat message', msg);
   });
 });
-
-http.listen(PORT, () => {
-  console.log(`Socket.IO server running at http://localhost:${PORT}/`);
+sequelize.sync({ force: false }).then(() => {
+  server.listen(PORT, () => console.log('Now listening'));
 });
+<<<<<<< HEAD
+
+
+
+
+
+
+
+
+
+
+
+
+
+=======
 
 
 app.listen(PORT, () => {
   console.log('Now listening')
   sequelize.sync({ force: false })
 });
+>>>>>>> dev
