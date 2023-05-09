@@ -1,8 +1,9 @@
-const path = require('path');
 const express = require('express');
+const session = require('express-session');
+const routes = require('./controllers');
+
 const exphbs = require('express-handlebars');
 
-const routes = require('./controllers');
 const sequelize = require('./config/connection');
 // Import the custom helper methods
 // const helpers = require('./utils/helpers');
