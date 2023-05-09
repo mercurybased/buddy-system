@@ -11,11 +11,11 @@ router.use('/users', userRoutes);
 module.exports = router;
 const userRoutes = require('./userRoutes.js');
 const interestRoutes = require('./interestRoutes.js');
-const biographyRoutes = require('./bioRoutes.js');
+// const biographyRoutes = require('./bioRoutes.js');
 // const homeRoutes = require('./homeRoutes');
 
 router.use('/users', userRoutes);
-router.use('/biography', biographyRoutes);
+// router.use('/biography', biographyRoutes);
 router.use('/interests', interestRoutes);
 // router.use('/', homeRoutes);
 

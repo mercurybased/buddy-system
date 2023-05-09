@@ -1,11 +1,10 @@
 const router = require('express').Router();
 const apiRoutes = require('./api');
-// const frontEndRoutes = require("./frontEndRoutes.js")
-// const homeRoutes = require('./homeRoutes');
+const frontEndRoutes = require("./frontEndRoutes.js")
+
 
 router.use('/api', apiRoutes);
-// router.use('/', frontEndRoutes);
-//commented out because it needs handlebars to work
-// router.use('/', homeRoutes);
+router.use('/', frontEndRoutes);
+
 
 module.exports = router;
