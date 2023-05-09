@@ -20,12 +20,8 @@
     "inquirer": "^8.2.4",
     "mysql2": "^3.3.0",
     "nodemon": "^2.0.22",
-<<<<<<< HEAD
     "sequelize": "^6.3.5",
     "socket.io": "^4.6.1"
     
-=======
-    "sequelize": "^6.3.5"
->>>>>>> dev
   }
 }
