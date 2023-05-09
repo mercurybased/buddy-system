@@ -39,14 +39,6 @@ User.init(
         len: [8],
       },
     },
-    interest_id: {
-      type: DataTypes.INTEGER,
-      // references: {
-      //   model: 'interest',
-      //   key: 'id',
-      
-      // }
-    },
     location_id: {
       type: DataTypes.INTEGER,
       // references: {
@@ -55,21 +47,8 @@ User.init(
         
       // }
     },
-    biography_id: {
-      type: DataTypes.INTEGER,
-      // references: {
-      //   model: 'biography',
-      //   key: 'id',
-        
-      // }
-    },
-    image_id: {
-      type: DataTypes.INTEGER,
-    //   references: {
-    //     model: 'image',
-    //     key: 'id',
-        
-    //   }
+    biography: {
+      type: DataTypes.TEXT
     }
   },
   {

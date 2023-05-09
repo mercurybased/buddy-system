@@ -1,0 +1,19 @@
+<h2>{{name}}'s page</h2>
+<h3>Projects</h3>
+{{#each projects}}
+    <h3>{{name}} </h3>
+    <p>{{description}}</p>
+    <p>amount needed: ${{needed_funding}}</p>
+    <button class="del-btn" data-proj-id="{{id}}">Delete me!</button>
+    <hr>
+{{/each}}
+
+<h3>Add a new Project</h3>
+<form action="">
+    <input type="text" id="name" placeholder="name">
+    <input type="text" id="funding" placeholder="funding">
+    <textarea id="description" placeholder="description"></textarea>
+    <button>Add a project</button>
+</form>
+
+<script src="/js/profile.js"></script>
