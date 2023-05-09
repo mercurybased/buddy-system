@@ -1,37 +1,34 @@
 const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
-
-class Interest extends Model {}
-
-Interest.init(
+// message model with an id and have a messsage and have a sender with another users id
+class message extends Model {}
+//change location to message coukd be a varchar
+message.init(
   {
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
-    },   
-    interest: {
-        type: DataTypes.STRING,
-        allowNull: false,
     },
-    user_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: "User",
-        key: "id"
-      }
+   
+    message: {
+    type: DataType.STRING,
+    References: {
+        model: "user",
+        key: "id",
+
     }
-  },{
-  
+  },
+},
+{
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'interest',
-
+    modelName: 'message',
   }
 );
 
-module.exports = Interest;
+module.exports = message;

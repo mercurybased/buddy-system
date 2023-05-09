@@ -39,14 +39,6 @@ User.init(
         len: [8],
       },
     },
-    interest_id: {
-      type: DataTypes.INTEGER,
-      // references: {
-      //   model: 'interest',
-      //   key: 'id',
-      
-      // }
-    },
     location_id: {
       type: DataTypes.INTEGER,
       // references: {

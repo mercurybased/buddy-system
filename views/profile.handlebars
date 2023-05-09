@@ -1,0 +1,38 @@
+<div class="row">
+    <!-- left column -->
+    <div class="col g-6">
+        <figure>
+            <img src="{{profile picture}}" alt="profile picture">
+        </figure>
+
+    </div>
+
+    <!-- right column -->
+    <div class="col g-6">
+        <div class="card m-6" style="background-color:#BEB4AA; height:100%; align-items:center;">
+            <div class="card-header">Log In</div>
+
+            <h2>{{name}}'s page</h2>
+            <h3>Projects</h3>
+            {{#each projects}}
+            <h3>{{name}} </h3>
+            <ul>
+                <li> {{interest}}</li>
+                <li> {{interest}}</li>
+                <li> {{interest}}</li>
+            </ul>
+            <p>{{biography}}</p>
+            <button class="del-btn" data-proj-id="{{id}}">Delete me!</button>
+            <hr>
+            {{/each}}
+        </div>
+
+    </div>
+
+
+
+    </form>
+</div>
+</div>
+</div>
+<script src="/js/profile.js"></script>

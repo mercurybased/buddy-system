@@ -1,12 +1,19 @@
-const path = require('path');
 const express = require('express');
 const session = require('express-session');
-
+const routes = require('./controllers');
+const path = require('path')
 const exphbs = require('express-handlebars');
 
-const routes = require('./controllers');
 const sequelize = require('./config/connection');
+
+// Import the custom helper methods
+// const helpers = require('./utils/helpers');
+
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
+
+const app = express();
+const PORT = process.env.PORT || 3001;
+
 
 const sess = {
   secret: "Super secret secret",
@@ -18,26 +25,52 @@ const sess = {
   })
 };
 
-const app = express();
+
 
 app.use(session(sess));
 
-// Import the custom helper methods
-// const helpers = require('./utils/helpers');
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-const PORT = process.env.PORT || 3001;
-
-// Incorporate the custom helper methods
-const hbs = exphbs.create();
-
+const hbs = exphbs.create({});
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
+
+app.use(express.static("public"))
+
+app.use(routes);
+
+sequelize.sync({ force: false }).then(() => 
+{
+  app.listen(PORT, () => console.log(`Now listening on port ${PORT}!`));
+}
+);
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
+sequelize.sync({ force: false }).then(() => {
+  app.listen(PORT, () => console.log('Now listening'));
+});
 
-app.use(routes);
+
+const http = require('http').Server(app);
+const io = require('socket.io')(http);
+
+
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/index.html');
+});
+
+io.on('connection', (socket) => {
+  socket.on('chat message', msg => {
+    io.emit('chat message', msg);
+  });
+});
+
+http.listen(PORT, () => {
+  console.log(`Server running at http://localhost:${PORT}!`);
+});
 
 
 app.listen(PORT, () => {
