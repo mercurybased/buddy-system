@@ -1,14 +1,19 @@
 <body>
-    <main style="background-color:#F8F3F2">
+    <main class="container-bg-home">
+        <!-- left column -->
         <div class="row">
-            <!-- left column -->
-            <div class="w-50 p-3">
-                <figure>
-                    <img src="/Assets/chingu_logo.png" alt="logo picture">
-                </figure>
-
+            <div class="col g-6">
+                <div class="row g-0 position-relative">
+                    <div class="col-md-6 mb-md-0 p-md-4">
+                        <img src="../Assets/chingu_logo.png" class="w-100" alt="logo picture">
+                    </div>
+                    <div class="col-md-6 p-4 ps-md-0">
+                        <h2 class="mt-0">ChinguTalk</h2>
+                        <p>It's dangerous to go alone... use this!
+                        </p>
+                    </div>
+                </div>
             </div>
-
             <!-- right column -->
             <div class="w-50 p-3">
                 <div class="card m-6" style="background-color:#BEB4AA; height:100%; align-items:center;">
@@ -63,14 +68,18 @@
                                     <option value="Chicago">
                                 </datalist>
                             </div>
-                            <div>
-                            <button type="button" class="btn btn-outline-light">Complete Sign Up</button>
-                            </div>
+                                <div id="liveAlertPlaceholder"></div>
+                                <button type="submit" class="btn mb-3 " id="liveAlertBtn" style="border: solid 2px #fff;" href="/profile">Complete Sign Up</button>
+
                         </form>
-                        <p><a href="/login" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Already have an account?</a></p>
+                        <p><a href="/login"
+                                class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Already
+                                have an account?</a></p>
                     </div>
                 </div>
             </div>
+
             <script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript"></script>
         <script src="/js/cloud.js"></script>
+        <script src="/js/signup.js"></script>
 </body>
