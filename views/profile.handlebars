@@ -10,9 +10,6 @@
     <!-- right column -->
     <div class="col g-6">
         <div class="card m-6" style="background-color:#BEB4AA; height:100%; align-items:center;">
-            <div class="card-header">Log In</div>
-            <h2>{{name}}'s page</h2>
-            <h3>Projects</h3>
             {{#each projects}}
             <h3>{{name}} </h3>
             <ul>
@@ -21,7 +18,23 @@
                 {{/each}}
             </ul>
             <p>{{biography}}</p>
-            <button class="del-btn" data-proj-id="{{id}}">Delete me!</button>
+            <div>
+
+
+                <a href="/chat" class="btn btn-outline-light" role="button" data-bs-toggle="button" id="msgBtn">
+                
+                Start Chatting
+                <img src="/Assets/chat bubble icon.png" style="height: 40px; width:auto">
+
+                </a>
+
+                {{!-- <button type="button" class="btn btn-outline-light" id="msgBtn">
+                    Start Chatting
+                    
+                    <a href="/chat"></a>
+                </button> --}}
+                <div id="messages"></div>
+            </div>
             <hr>
             {{/each}}
         </div>
@@ -35,3 +48,5 @@
 </div>
 </div>
 <script src="/js/profile.js"></script>
+<script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+<script src="/js/socket.js"></script>
