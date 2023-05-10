@@ -1,9 +1,52 @@
-<h1>Homepage!</h1>
-{{#each allProjects}}
-    <h3>{{name}} by {{username}}</h3>
-    <p>{{biography}}</p>
-    <ul> 
-        <li> </li>
-    </ul>
-    <hr>
-{{/each}}
+<body>
+    <main class="container-bg-home">
+        <!-- left column -->
+        <div class="row">
+            <div class="col g-6">
+                {{!-- <div class="custom-popover" data-bs-container="body" data-bs-toggle="popover"
+                    data-bs-trigger="hover focus" data-bs-placement="bottom" data-bs-content="Bottom popover">
+                    <p>test</p>
+                </div> --}}
+                <div class="row g-0 position-relative">
+                    {{!-- <span class="d-inline-block" tabindex="0" data-bs-toggle="popover"
+                        data-bs-trigger="hover focus" data-bs-content="Disabled popover">
+                        <button class="btn btn-primary" type="button" disabled>Disabled button</button>
+                    </span> --}}
+                    <button type="button" data-bs-container="body" data-bs-toggle="popover"
+                        data-bs-content="hover feature working">Click to toggle popover</button>
+
+
+                    <div class="col-md-6 mb-md-0 p-md-4">
+                        <img src="../Assets/chingu_logo.png" class="w-100" id="custom-popover" alt="logo picture"
+                            data-bs-container="body" data-bs-toggle="popover" data-bs-content="hover feature working">
+                    </div>
+                    <div class="col-md-6 p-4 ps-md-0">
+                        <h2 class="mt-0">ChinguTalk</h2>
+                        <p>It's dangerous to go alone... use this!
+                        </p>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- right column -->
+            <div class="col g-6">
+                <div class="card m-6 " style="background-color:#BEB4AA; height:100%; align-items:center;">
+                    <div class="card-body d-grid gap-2">
+                        {{!-- <div class="d-grid gap-2"> --}}
+                            <button class="btn btn-primary" type="button" style="width:80%;">Sign Up</button>
+                            <button class="btn btn-primary" type="button" style="width:80%;">Sign In</button>
+                            
+                        {{!-- </div> --}}
+                        {{!-- <button type="button" class="btn btn-outline-light btn-lg">Login</button> --}}
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        </div>
+        <script src="/js/home.js"></script>
+</body>
