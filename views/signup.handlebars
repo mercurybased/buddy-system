@@ -22,19 +22,19 @@
                         <form id="login-form">
                             <div class="row">
                                 <div class="col">
-                                    <input type="text" class="form-control" placeholder="First name"
-                                        aria-label="First name">
+                                    <input type="text" name="first-name" class="form-control" placeholder="First name"
+                                        aria-label="First name" value={{first-name}}>
                                 </div>
 
                                 <div class="col">
                                     <input type="text" name= "last-name" class="form-control" placeholder="Last name"
-                                        aria-label="Last name">
+                                        aria-label="Last name" value={{last-name}}>
                                 </div>
                             </div>
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label">Email address</label>
                                 <input type="email" name="email" class="form-control" id="exampleFormControlInput1"
-                                    placeholder="name@example.com">
+                                    placeholder="name@example.com" value={{email}}>
                             </div>
                             <div class="row g-3 align-items-center">
                                 <div class="col-auto">
@@ -42,7 +42,7 @@
                                 </div>
                                 <div class="col-auto">
                                     <input type="password" name="password" id="inputPassword6" class="form-control"
-                                        aria-labelledby="passwordHelpInline">
+                                        aria-labelledby="passwordHelpInline" value={{password}}>
                                 </div>
                                 <div class="col-auto">
                                     <span id="passwordHelpInline" class="form-text">
@@ -52,14 +52,14 @@
                             </div>
                             <label for="profile picture" class="form-label">Add a profile picture</label>
                             <div class="input-group mb-3">
-                                <input type="file" name="image" class="form-control" id="inputGroupFile02">
+                                <input type="file" name="image" class="form-control" id="inputGroupFile02" value{{image}}>
                                 {{!-- <label class="input-group-text" for="inputGroupFile02">Upload</label> --}}
                             </div>
                                 <button id="upload_widget">Upload files</button>
                             <div> 
                                 <label for="exampleDataList" class="form-label">Search for an interest</label>
                                 <input class="form-control" name="interest" list="datalistOptions" id="exampleDataList"
-                                    placeholder="Type to search...">
+                                    placeholder="Type to search..." value={{interest}}>
                                 <datalist id="datalistOptions">
                                     <option value="San Francisco">
                                     <option value="New York">

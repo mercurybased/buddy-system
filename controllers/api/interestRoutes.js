@@ -1,6 +1,10 @@
 const router = require('express').Router();
 const { Interest } = require('../../models');
+// 
+const sequelize = require('sequelize');
+const Op=Sequelize.Op;
 
+// 
 router.get('/', async (req,res) => {
     try {
       const interestData = await Interest.findAll({ include:  { all: true, nested: true } })
@@ -42,3 +46,19 @@ router.get('/', async (req,res) => {
   });
 
   module.exports = router
+
+
+
+
+// // interest search
+// // search by interest
+// router.get('/search',  (req, res) => {
+//   let {term}req.query;
+//   term=term.toLowerCase();
+// user.findAll({where:{interest:{[Op.like]:`%${term}%`}}})
+// .then (user=res.render("search view to be added"{pass in intreswt/user}))
+// .catch  (err=>console.log(err));
+// // mayebe replace user with interest 
+// // maybe replace term line with "%" + term + "%"
+
+// });
