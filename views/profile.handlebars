@@ -2,7 +2,7 @@
     <!-- left column -->
     <div class="col g-6">
         <figure>
-            {{!-- <img src="{{profile picture}}" alt="profile picture"> --}}
+            <img src="{{userData.photoUrl}}" alt="profile picture">
         </figure>
 
     </div>
@@ -10,15 +10,17 @@
     <!-- right column -->
     <div class="col g-6">
         <div class="card m-6" style="background-color:#BEB4AA; height:100%; align-items:center;">
-            {{#each projects}}
-            <h3>{{name}} </h3>
+            {{!-- <div class="card-header">Log In</div> --}}
+            <h2>{{userData.firstName}}'s page</h2>
+            <h3>Interests</h3>
+            {{!-- {{#each userData}} --}}
             <ul>
-                {{#each this.interest}}
-
-                <li>{{this}}</li>
+                {{#each userData.interests}}
+                <li>{{interest}}</li>
                 {{/each}}
+                {{!-- {{/each}} --}}
             </ul>
-            <p>{{biography}}</p>
+            <p>{{userData.biography}}</p>
             <div>
 
 
@@ -37,7 +39,7 @@
                 <div id="messages"></div>
             </div>
             <hr>
-            {{/each}}
+            {{!-- {{/each}} --}}
         </div>
 
     </div>
@@ -50,3 +52,5 @@
 <script src="/js/profile.js"></script>
 <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
 <script src="/js/socket.js"></script>
+<script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript"></script> 
+<script src="/js/cloud.js"></script>
