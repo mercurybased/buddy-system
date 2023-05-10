@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row container-bg-profile">
     <!-- left column -->
     <div class="col g-6">
         <figure>
@@ -17,6 +17,7 @@
             <h3>{{name}} </h3>
             <ul>
                 {{#each this.interest}}
+
                 <li>{{this}}</li>
                 {{/each}}
             </ul>
@@ -24,8 +25,8 @@
             <div>
 
 
-    <button id="msgBtn">send a message</button>
-    <div id="messages"></div>
+                <button id="msgBtn">send a message</button>
+                <div id="messages"></div>
             </div>
             <hr>
             {{/each}}
@@ -35,10 +36,9 @@
 
 
 
-    </form>
 </div>
-</div>
-</div>
+
+
 <script src="/js/profile.js"></script>
 <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
 <script src="/js/socket.js"></script>
