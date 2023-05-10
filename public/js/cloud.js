@@ -1,4 +1,4 @@
-const photoForm = document.querySelector("#login-form");
+const photoForm = document.querySelector("#upload_widget");
 
 var myWidget = cloudinary.createUploadWidget({
     cloudName: 'de19jsefk', 
@@ -28,4 +28,4 @@ const submit = async (e) => {
   console.log(response);
 };
 
-photoForm.addEventListener("submit", submit);
+photoForm.addEventListener("click", submit);
