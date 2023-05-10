@@ -3,20 +3,28 @@ const router = express.Router();
 const { User, Post } = require('../models');
 
 router.get("/", (req, res) => {
-    Post.findAll({
-        include: [User]
-    }).then(postData => {
-        const hbsData = postData.map(post => post.get({ plain: true }));
-        console.log(hbsData);
-        res.render("home", {
-            allPosts: hbsData,
-            logged_in: req.session.logged_in
-        })
+    res.render("home", {
+        logged_in: req.session.logged_in
     })
 })
+    // Post.findAll({
+    //     include: [User]
+    // }).then(postData => {
+    //     const hbsData = postData.map(post => post.get({ plain: true }));
+    //     console.log(hbsData);
+    //     res.render("home", {
+    //         allPosts: hbsData,
+    //         logged_in: req.session.logged_in
+    //     })
+    // })
+// })
 
-
-router.get("/login", (req, res) => {
+router.get("/chat" ,(req,res)=>{
+    res.render("chat" ,{
+        logged_in:req.session.logged_in     
+    })
+})
+router.get("/login",(req,res)=>{
     // if(req.session.logged_in){
     //     return res.redirect("/profile")
     // }
@@ -29,7 +37,7 @@ router.get("/signup", (req, res) => {
         logged_in: req.session.logged_in
     })
 })
-module.exports = router;
+
 router.get("/profile", (req, res) => {
     var projects = [
         {

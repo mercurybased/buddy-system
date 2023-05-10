@@ -36,6 +36,9 @@ app.get('/', (req, res) => {
 });
 io.on('connection', (socket) => {
   socket.on('chat message', msg => {
+    //object with message inside of it with an id
+    //if statement where you emit to certain person if there ids paired
+    //save messages to models
     io.emit('chat message', msg);
   });
 });
