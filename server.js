@@ -7,6 +7,7 @@ const exphbs = require('express-handlebars');
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const app = express();
+// const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 3001;
 const sess = {
   secret: "Super secret secret",
@@ -21,6 +22,9 @@ const server = http.createServer(app)
 const io = require('socket.io')(server);
 app.use(session(sess));
 const hbs = exphbs.create({});
+
+// app.use(bodyparser.urlencoded({ extended: false }));
+
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 app.use(express.json());
