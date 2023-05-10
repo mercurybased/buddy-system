@@ -59,7 +59,8 @@ const signup = async (e) => {
         lastName: document.querySelector("#last-name").value,
         password: document.querySelector("#inputPassword6").value,
         biography: document.querySelector("#biography").value,
-        interest: document.querySelector("#interests").value
+        interest: document.querySelector("#interests").value,
+        photoUrl: document.querySelector("#upload_widget").value
       }),
     });
     if (response.status === 200) {
