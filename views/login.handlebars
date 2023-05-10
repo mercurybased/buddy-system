@@ -1,12 +1,18 @@
 <body>
-    <main style="background-color:#F8F3F2">
+    <main class="container-bg-home">
+        <!-- left column -->
         <div class="row">
-            <!-- left column -->
             <div class="col g-6">
-                <figure>
-                    <img src="../Assets/chingu_logo.png" alt="logo picture">
-                </figure>
-
+                <div class="row g-0 position-relative">
+                    <div class="col-md-6 mb-md-0 p-md-4">
+                        <img src="../Assets/chingu_logo.png" class="w-100" alt="logo picture">
+                    </div>
+                    <div class="col-md-6 p-4 ps-md-0">
+                        <h2 class="mt-0">ChinguTalk</h2>
+                        <p>It's dangerous to go alone... use this!
+                        </p>
+                    </div>
+                </div>
             </div>
 
             <!-- right column -->
@@ -27,10 +33,14 @@
                                         placeholder="Password">
                                 </div>
                                 <div class="col-auto">
-                                    <button type="submit" class="btn mb-3" style="border: solid 2px #fff; ">Sign
+                                    <button type="submit" class="btn mb-3" style="border: solid 2px #fff; " href="/profile" >Sign
                                         In</button>
                                 </div>
-                                <p><a href="/signup" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Create an account</a></p>
+
+
+                                <p><a href="/signup"
+                                        class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Create
+                                        an account</a></p>
                             </form>
                     </div>
 
@@ -43,3 +53,5 @@
         </div>
         </div>
 </body>
+
+<script src="/js/profile.js"></script>
