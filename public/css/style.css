@@ -19,6 +19,11 @@
 }
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
 
+nav {
+    background-color:rgba(255, 255, 255, 0.024);
+    backdrop-filter: blur(6.6px);
+}
+
 
 * {
     font-family: 'Poppins', sans-serif;
@@ -37,6 +42,16 @@
     width: auto;
     height: 100%;
     background-image: url("../Assets/white\ leaf\ shadow\ bg.png");
+    background-repeat: no-repeat;    
+    background-size:cover;
+    background-position: center;
+
+}
+.container-bg-chat {
+    position: fixed;
+    width: auto;
+    height: 100%;
+    background-image: url("../Assets/green\ leaf\ shadow\ bg.png");
     background-repeat: no-repeat;    
     background-size:cover;
     background-position: center;
