@@ -7,7 +7,28 @@
     --bg-light-green: #CDCFC0;
     --txt-green:#223D3C;
 }
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
 
 .card-body {
     padding: 2px
+}
+
+.container-bg-home {
+    position: fixed;
+    width: auto;
+    height: 100%;
+    background-image: url("../Assets/white\ leaf\ shadow\ bg.png");
+    background-repeat: no-repeat;    
+    background-size:cover;
+    background-position: center;
+
 }
