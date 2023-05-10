@@ -15,7 +15,11 @@ router.get("/",(req,res)=>{
     })
 })
 
-
+router.get("/chat" ,(req,res)=>{
+    res.render("chat" ,{
+        logged_in:req.session.logged_in     
+    })
+})
 router.get("/login",(req,res)=>{
     // if(req.session.logged_in){
     //     return res.redirect("/profile")
