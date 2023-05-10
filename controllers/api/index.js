@@ -7,3 +7,4 @@ router.use('/users', userRoutes);
 router.use('/interests', interestRoutes);
 
 module.exports = router;
+
