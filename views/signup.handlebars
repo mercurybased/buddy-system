@@ -19,7 +19,7 @@
                 <div class="card m-6" style="background-color:#BEB4AA; height:100%; align-items:center;">
                     <div class="card-header">Sign Up</div>
                     <div class="card-body">
-                        <form>
+                        <form id="login-form">
                             <div class="row">
                                 <div class="col">
                                     <input type="text" class="form-control" placeholder="First name"
@@ -53,10 +53,10 @@
                             <label for="profile picture" class="form-label">Add a profile picture</label>
                             <div class="input-group mb-3">
                                 <input type="file" class="form-control" id="inputGroupFile02">
-                                <label class="input-group-text" for="inputGroupFile02">Upload</label>
+                                {{!-- <label class="input-group-text" for="inputGroupFile02">Upload</label> --}}
                             </div>
-
-                            <div>
+                                <button id="upload_widget">Upload files</button>
+                            <div> 
                                 <label for="exampleDataList" class="form-label">Search for an interest</label>
                                 <input class="form-control" list="datalistOptions" id="exampleDataList"
                                     placeholder="Type to search...">
@@ -78,6 +78,8 @@
                     </div>
                 </div>
             </div>
-</body>
 
-<script src="/js/signup.js"></script>
+            <script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript"></script>
+        <script src="/js/cloud.js"></script>
+        <script src="/js/signup.js"></script>
+</body>

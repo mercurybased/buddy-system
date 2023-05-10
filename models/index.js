@@ -8,13 +8,5 @@ Interest.belongsTo(User, {
   foreignKey: 'user_id'
 });
 
-// User.hasOne(Biography)
-// Biography.belongsTo(User, {
-//   foreignKey: 'user_id'
-// });
-
-// User.hasOne(Location)
-
-// User.hasOne(Image)
 
 module.exports = { User, Interest };
