@@ -58,62 +58,61 @@ nav {
 
 }
 
-/* .custom-popover {
-    --bs-popover-max-width: 200px;
-    --bs-popover-border-color: var(--bs-primary);
-    --bs-popover-header-bg: var(--bs-primary);
-    --bs-popover-header-color: var(--bs-white);
-    --bs-popover-body-padding-x: 1rem;
-    --bs-popover-body-padding-y: .5rem;
-  } */
+.container-bg-profile {
+    position: fixed;
+    /* width: auto;
+    height: 100% */
+    background-image: url("../Assets/linen\ bg.png");
+    background-repeat: no-repeat;    
+    background-size:cover;
+    background-position: center;
 
-
-  /* Chat containers */
-.container {
-  border: 2px solid #dedede;
-  background-color: #f1f1f1;
-  border-radius: 5px;
-  padding: 10px;
-  margin: 10px 0;
 }
 
-/* Darker chat container */
-.darker {
-  border-color: #ccc;
-  background-color: #ddd;
+#tooltip h2{
+    font-size: 15px;
+    font-weight: bold;
+}
+#tooltip p{
+    font-size: 15px;
+    font-weight: lighter;
 }
 
-/* Clear floats */
-.container::after {
-  content: "";
-  clear: both;
-  display: table;
+#tooltip {
+    /* background: #333; */
+    color: #423F32;
+    font-weight: bold;
+    padding: 4px 8px;
+    font-size: 13px;
+    border-radius: 4px;
+    display: none;
+    width: 25%;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+#tooltip[data-show] {
+display: block;
 }
 
-/* Style images */
-.container img {
-  float: left;
-  max-width: 60px;
-  width: 100%;
-  margin-right: 20px;
-  border-radius: 50%;
-}
+  #arrow,
+  #arrow::before {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: inherit;
+  }
 
-/* Style the right image */
-.container img.right {
-  float: right;
-  margin-left: 20px;
-  margin-right:0;
-}
+  #arrow {
+    visibility: hidden;
+  }
 
-/* Style time text */
-.time-right {
-  float: right;
-  color: #aaa;
-}
+  #arrow::before {
+    visibility: visible;
+    content: '';
+    transform: rotate(45deg);
+  }
 
-/* Style time text */
-.time-left {
-  float: left;
-  color: #999;
-}
+  #tooltip[data-popper-placement^='bottom']>#arrow {
+    top: -4px;
+  }
