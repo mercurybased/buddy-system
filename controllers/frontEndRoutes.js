@@ -46,7 +46,6 @@ router.get("/profile", async (req, res) => {
     //         biography: "married young, raising a rockhead"
     //     }
     // ]
-
     // check who is logged in from req.session
     const userId = req.session.userId
     // find that user (and all of their data)
