@@ -39,10 +39,10 @@ router.get("/signup", (req, res) => {
 })
 
 router.get("/profile", async (req, res) => {
-    // var projects = [
+    // var userData = [
     //     {
     //         name: "Wilma",
-    //         interest: ["boldering", "rock climbing", "walking the dinosaur"],
+    //         interests: ["boldering", "rock climbing", "walking the dinosaur"],
     //         biography: "married young, raising a rockhead"
     //     }
     // ]

@@ -58,8 +58,8 @@ const signup = async (e) => {
         firstName: document.querySelector("#first-name").value,
         lastName: document.querySelector("#last-name").value,
         password: document.querySelector("#inputPassword6").value,
-        biography: document.querySelector("#bio").value,
-        photoUrl: document.querySelector("#bio").value,
+        biography: document.querySelector("#biography").value,
+        interest: document.querySelector("#interests").value
       }),
     });
     if (response.status === 200) {

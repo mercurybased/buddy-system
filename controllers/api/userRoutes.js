@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const { User, Interest } = require('../../models');
 
 router.get('/:id', async (req,res) => {
   try {
@@ -28,9 +28,10 @@ router.get('/:id', async (req,res) => {
 
 
 router.post('/', async (req, res) => {
-  try {
+  try {    
     const newUser = await User.create(req.body);
-
+    const newInterest = await Interest.create({user_id:newUser.id, interest:req.body.interest})
+    
     req.session.save( () => {
       req.session.userId = newUser.id,
       req.session.email = newUser.email
