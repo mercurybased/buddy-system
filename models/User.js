@@ -24,13 +24,13 @@ User.init(
         isEmail: true,
       },
     },
-    username: {
+    firstName: {
       type: DataTypes.STRING,
-      allowNull: false,
-      unique: true,
-      validate: {
-        len: [5, 15],
-      },
+      allowNull: false
+    },
+    lastName: {
+      type: DataTypes.STRING,
+      allowNull: false
     },
     password: {
       type: DataTypes.STRING,
@@ -48,7 +48,12 @@ User.init(
       // }
     },
     biography: {
-      type: DataTypes.TEXT
+      type: DataTypes.TEXT,
+      allowNull:true
+    },
+    photoUrl: {
+      type:DataTypes.STRING,
+      allowNull:true
     }
   },
   {
