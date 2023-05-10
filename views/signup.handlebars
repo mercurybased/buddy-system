@@ -27,22 +27,22 @@
                                 </div>
 
                                 <div class="col">
-                                    <input type="text" id= "last-name"class="form-control" placeholder="Last name"
-                                        aria-label="Last name" value={{lastName}}>
+                                    <input type="text" name= "last-name" class="form-control" placeholder="Last name"
+                                        aria-label="Last name">
                                 </div>
                             </div>
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                                <input type="email" class="form-control" id="exampleFormControlInput1"
-                                    placeholder="name@example.com" value={{email}}>
+                                <input type="email" name="email" class="form-control" id="exampleFormControlInput1"
+                                    placeholder="name@example.com">
                             </div>
                             <div class="row g-3 align-items-center">
                                 <div class="col-auto">
                                     <label for="inputPassword6" class="col-form-label">Password</label>
                                 </div>
                                 <div class="col-auto">
-                                    <input type="password" id="inputPassword6" class="form-control"
-                                        aria-labelledby="passwordHelpInline" value={{password}}>
+                                    <input type="password" name="password" id="inputPassword6" class="form-control"
+                                        aria-labelledby="passwordHelpInline">
                                 </div>
                                 <div class="col-auto">
                                     <span id="passwordHelpInline" class="form-text">
@@ -56,11 +56,13 @@
                             </div>
                             {{!-- <label for="profile picture" class="form-label">Add a profile picture</label> --}}
                             <div class="input-group mb-3">
+                                <input type="file" name="image" class="form-control" id="inputGroupFile02">
+                                {{!-- <label class="input-group-text" for="inputGroupFile02">Upload</label> --}}
                             </div>
                                 <button id="upload_widget">Add a profile picture</button>
                             <div> 
                                 <label for="exampleDataList" class="form-label">Search for an interest</label>
-                                <input class="form-control" list="datalistOptions" id="exampleDataList"
+                                <input class="form-control" name="interest" list="datalistOptions" id="exampleDataList"
                                     placeholder="Type to search...">
                                 <datalist id="datalistOptions">
                                     <option value="San Francisco">
