@@ -4,6 +4,7 @@ const http = require('http');
 const routes = require('./controllers');
 const path = require('path')
 const exphbs = require('express-handlebars');
+const bodyParser = require('body-parser')
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const app = express();
@@ -21,8 +22,12 @@ const server = http.createServer(app)
 const io = require('socket.io')(server);
 app.use(session(sess));
 const hbs = exphbs.create({});
+
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
+
+app.use(bodyParser.urlencoded({ extended: false}))
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(routes);

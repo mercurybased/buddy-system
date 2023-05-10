@@ -34,20 +34,26 @@ router.get("/signup", (req, res) => {
     })
 })
 
-router.get("/profile", (req, res) => {
-    var projects = [
-        {
-            name: "Wilma",
-            interest: ["boldering", "rock climbing", "walking the dinosaur"],
-            biography: "married young, raising a rockhead"
-        }
-    ]
+router.get("/profile", async (req, res) => {
+    // var projects = [
+    //     {
+    //         name: "Wilma",
+    //         interest: ["boldering", "rock climbing", "walking the dinosaur"],
+    //         biography: "married young, raising a rockhead"
+    //     }
+    // ]
 
-
-
+    // check who is logged in from req.session
+    const userId = req.session.userId
+    // find that user (and all of their data)
+    const userData= await User.findByPk(userId, {
+        include: {all:true, nested:true}
+    })
+    const user = userData.get({plain: true})
+    console.log(user)
+    // render profile, and send the userData
     res.render("profile", {
-        logged_in: req.session.logged_in,
-        projects
+       userData:user
     })
 })
 module.exports = router;

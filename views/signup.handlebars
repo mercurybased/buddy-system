@@ -22,19 +22,19 @@
                         <form id="login-form">
                             <div class="row">
                                 <div class="col">
-                                    <input type="text" class="form-control" placeholder="First name"
-                                        aria-label="First name">
+                                    <input type="text" class="form-control" id="first-name" placeholder="First name"
+                                        aria-label="First name" value={{firstName}}>
                                 </div>
 
                                 <div class="col">
-                                    <input type="text" class="form-control" placeholder="Last name"
-                                        aria-label="Last name">
+                                    <input type="text" id= "last-name"class="form-control" placeholder="Last name"
+                                        aria-label="Last name" value={{lastName}}>
                                 </div>
                             </div>
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label">Email address</label>
                                 <input type="email" class="form-control" id="exampleFormControlInput1"
-                                    placeholder="name@example.com">
+                                    placeholder="name@example.com" value={{email}}>
                             </div>
                             <div class="row g-3 align-items-center">
                                 <div class="col-auto">
@@ -42,20 +42,22 @@
                                 </div>
                                 <div class="col-auto">
                                     <input type="password" id="inputPassword6" class="form-control"
-                                        aria-labelledby="passwordHelpInline">
+                                        aria-labelledby="passwordHelpInline" value={{password}}>
                                 </div>
                                 <div class="col-auto">
                                     <span id="passwordHelpInline" class="form-text">
                                         Must be 8-20 characters long.
                                     </span>
                                 </div>
+                                <div class="col-auto">
+                                    <label for="biographyform" class="'form-bio"></label>
+                                    <input type="biography" id="biography" class="form-control" placeholder="write a little about yourself" value={{bio}}>
+                                </div>
                             </div>
-                            <label for="profile picture" class="form-label">Add a profile picture</label>
+                            {{!-- <label for="profile picture" class="form-label">Add a profile picture</label> --}}
                             <div class="input-group mb-3">
-                                <input type="file" class="form-control" id="inputGroupFile02">
-                                {{!-- <label class="input-group-text" for="inputGroupFile02">Upload</label> --}}
                             </div>
-                                <button id="upload_widget">Upload files</button>
+                                <button id="upload_widget">Add a profile picture</button>
                             <div> 
                                 <label for="exampleDataList" class="form-label">Search for an interest</label>
                                 <input class="form-control" list="datalistOptions" id="exampleDataList"

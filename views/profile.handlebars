@@ -11,16 +11,17 @@
     <div class="col g-6">
         <div class="card m-6" style="background-color:#BEB4AA; height:100%; align-items:center;">
             <div class="card-header">Log In</div>
-            <h2>{{name}}'s page</h2>
+            <h2>{{userData.firstName}}'s page</h2>
             <h3>Projects</h3>
-            {{#each projects}}
+            {{#each userData.projects}}
             <h3>{{name}} </h3>
+            {{/each}}
             <ul>
-                {{#each this.interest}}
+                {{#each userData.interests}}
                 <li>{{this}}</li>
                 {{/each}}
             </ul>
-            <p>{{biography}}</p>
+            <p>{{userData.biography}}</p>
             <div>
 
 
