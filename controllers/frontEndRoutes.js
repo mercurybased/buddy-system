@@ -19,8 +19,12 @@ router.get("/", (req, res) => {
     // })
 // })
 
-
-router.get("/login", (req, res) => {
+router.get("/chat" ,(req,res)=>{
+    res.render("chat" ,{
+        logged_in:req.session.logged_in     
+    })
+})
+router.get("/login",(req,res)=>{
     // if(req.session.logged_in){
     //     return res.redirect("/profile")
     // }
@@ -33,7 +37,7 @@ router.get("/signup", (req, res) => {
         logged_in: req.session.logged_in
     })
 })
-module.exports = router;
+
 router.get("/profile", (req, res) => {
     var projects = [
         {
