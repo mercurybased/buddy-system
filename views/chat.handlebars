@@ -1,9 +1,50 @@
-<div>
-    <input id="message">
-    <button id="saveBtn">send</button>
+<div class="row container-bg-chat">
+    <div class="container">
+        {{#each message}}
+        <img src="{{user2Image}}" alt="Avatar">
+        <p>{{messageBody}}</p>
+    </div>
+
+    <div class="container darker">
+        {{name}}
+        <img src="{{userImage}}" alt="Avatar" class="right">
+        <p>{{message}}</p>
+    </div>
+
+    <div class="container">
+        {{name}}
+        <img src="{{user2Image}}" alt="Avatar">
+        <p>{{message}}</p>
+    </div>
+
+    <div class="container darker">
+        {{name}}
+        <img src="{{userImage}}" alt="Avatar" class="right">
+        <p>{{message}}</p>
+    </div>
+    {{/each}}
+
+</div>
+<div class="d-flex justify-content-evenly fixed-bottom">
+    <div class="col-9">
+        <textarea class="form-control" id="exampleFormControlTextarea1" id="message" rows="3"></textarea>
+    </div>
+
+    <div class="col">
+        <button type="button" class="btn" id="saveBtn">
+
+            <img src="/Assets/chat bubble icon.png" style="height:40px; width:auto;">
+
+        </button>
+    </div>
+
 </div>
 <div id="messages"></div>
+
+
+
+
+
+<script src="/js/profile.js"></script>
 <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
 <script src="/js/socket.js"></script>
-
- 

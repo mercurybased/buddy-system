@@ -22,8 +22,8 @@
                         <form id="login-form">
                             <div class="row">
                                 <div class="col">
-                                    <input type="text" name="first-name" class="form-control" placeholder="First name"
-                                        aria-label="First name" value={{first-name}}>
+                                    <input type="text" class="form-control" id="first-name" placeholder="First name"
+                                        aria-label="First name" value={{firstName}}>
                                 </div>
 
                                 <div class="col">
@@ -49,13 +49,17 @@
                                         Must be 8-20 characters long.
                                     </span>
                                 </div>
+                                <div class="col-auto">
+                                    <label for="biographyform" class="'form-bio"></label>
+                                    <input type="biography" id="biography" class="form-control" placeholder="write a little about yourself" value={{bio}}>
+                                </div>
                             </div>
-                            <label for="profile picture" class="form-label">Add a profile picture</label>
+                            {{!-- <label for="profile picture" class="form-label">Add a profile picture</label> --}}
                             <div class="input-group mb-3">
                                 <input type="file" name="image" class="form-control" id="inputGroupFile02" value{{image}}>
                                 {{!-- <label class="input-group-text" for="inputGroupFile02">Upload</label> --}}
                             </div>
-                                <button id="upload_widget">Upload files</button>
+                                <button id="upload_widget">Add a profile picture</button>
                             <div> 
                                 <label for="exampleDataList" class="form-label">Search for an interest</label>
                                 <input class="form-control" name="interest" list="datalistOptions" id="exampleDataList"
