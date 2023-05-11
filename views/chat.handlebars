@@ -1,5 +1,7 @@
-<div class="row container-bg-chat">
-    <div class="container">
+<div class="container-fluid" style="background-color: salmon">
+
+<div class="row">
+    {{!-- <div class="container">
         {{#each message}}
         <img src="{{user2Image}}" alt="Avatar">
         <p>{{messageBody}}</p>
@@ -23,9 +25,9 @@
         <p>{{message}}</p>
     </div>
     {{/each}}
+ --}}
 
-</div>
-<div class="d-flex justify-content-evenly fixed-bottom">
+<div class="d-flex justify-content-evenly fixed-bottom" style="background-color:#BEB4AA">
     <div class="col-9">
         <textarea class="form-control" id="exampleFormControlTextarea1" id="message" rows="3"></textarea>
     </div>
@@ -37,13 +39,13 @@
 
         </button>
     </div>
-
+</div>
 </div>
 <div id="messages"></div>
 
 
 
-
+</div>
 
 <script src="/js/profile.js"></script>
 <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>

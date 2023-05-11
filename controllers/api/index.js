@@ -1,5 +1,4 @@
 const router = require('express').Router();
-
 const userRoutes = require('./userRoutes.js');
 const interestRoutes = require('./interestRoutes.js');
 
