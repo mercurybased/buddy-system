@@ -1,118 +1,166 @@
 :root {
-    --lightest-beige:#F1EBE5;
-    --bg-light-beige-pink:#F8F3F2;
-    --bg-mushroomy-brown:#BEB4AA;
-    --txt-dark-brown:#69443C;
-    --navy: #30334B;
-    --bg-light-green: #CDCFC0;
-    --txt-green:#223D3C;
+  --lightest-beige: #F1EBE5;
+  --bg-light-beige-pink: #F8F3F2;
+  --bg-mushroomy-brown: #BEB4AA;
+  --txt-dark-brown: #69443C;
+  --navy: #30334B;
+  --bg-light-green: #CDCFC0;
+  --txt-green: #223D3C;
 }
-@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Raleway&family=Rubik:wght@600&display=swap');
 
 
-* {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    flex-wrap: wrap;
+/* profile picture formatting */
+/* figure {
+  position: relative;
+  display: flex;
+} */
+
+.profile-pic {
+  /* align-items: end; */
+  /* height: 500px; */
+  width: 100px;
+  overflow: hidden;
+  border-radius: 50%;
 }
-@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+.profile-pic img{
+  /* width: 100%; */
+  margin-top: -25px;
+  /* width: auto; */
+  
+}
+
+
+
+.navbar-brand {
+  font-family: 'Libre Baskerville'
+};
+
+.home h2 {
+  font-family: 'Libre Baskerville'
+};
+
+p {
+  font-family: 'Raleway'
+};
+
+.btn {
+  font-family:'Rubik'
+};
+*{
+  font-family: 'Libre Baskerville', serif;
+  font-family: 'Raleway', sans-serif;
+  font-family: 'Rubik', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
 
 nav {
-    background-color:rgba(255, 255, 255, 0.024);
-    backdrop-filter: blur(6.6px);
+  background-color: rgba(255, 255, 255, 0.024);
+  backdrop-filter: blur(6.6px);
 }
 
 
 * {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    flex-wrap: wrap;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  flex-wrap: wrap;
 }
 
 .card-body {
-    padding: 2px
+  padding: 2px
 }
 
 .container-bg-home {
-    position: fixed;
-    width: auto;
-    height: 100%;
-    background-image: url("../Assets/white\ leaf\ shadow\ bg.png");
-    background-repeat: no-repeat;    
-    background-size:cover;
-    background-position: center;
+  /* position: fixed;
+  /* width: auto; */
+  height: 100%;
+  background-image: url("../Assets/white\ leaf\ shadow\ bg.png");
+  /* background-repeat: no-repeat; */
+  background-size: cover;
+  /* background-position: center; */
 
 }
+
 .container-bg-chat {
-    position: fixed;
-    width: auto;
-    height: 100%;
-    background-image: url("../Assets/green\ leaf\ shadow\ bg.png");
-    background-repeat: no-repeat;    
-    background-size:cover;
-    background-position: center;
+  background-image: url("../Assets/green\ leaf\ shadow\ bg.png");
+  background-size: cover;
+  height: 100%;
 
 }
 
 .container-bg-profile {
-    position: fixed;
-    /* width: auto;
+  position: fixed;
+  /* width: auto;
     height: 100% */
-    background-image: url("../Assets/linen\ bg.png");
-    background-repeat: no-repeat;    
-    background-size:cover;
-    background-position: center;
+  background-image: url("../Assets/linen\ bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 
 }
 
-#tooltip h2{
-    font-size: 15px;
-    font-weight: bold;
+#tooltip h2 {
+  font-size: 15px;
+  font-weight: bold;
 }
-#tooltip p{
-    font-size: 15px;
-    font-weight: lighter;
+
+#tooltip p {
+  font-size: 15px;
+  font-weight: lighter;
 }
 
 #tooltip {
-    /* background: #333; */
-    color: #423F32;
-    font-weight: bold;
-    padding: 4px 8px;
-    font-size: 13px;
-    border-radius: 4px;
-    display: none;
-    width: 25%;
-    flex-wrap: wrap;
-    text-align: center;
-  }
-
-#tooltip[data-show] {
-display: block;
+  /* background: #333; */
+  color: #423F32;
+  font-weight: bold;
+  padding: 4px 8px;
+  font-size: 13px;
+  border-radius: 4px;
+  display: none;
+  width: 25%;
+  flex-wrap: wrap;
+  text-align: center;
 }
 
-  #arrow,
-  #arrow::before {
-    position: absolute;
-    width: 8px;
-    height: 8px;
-    background: inherit;
-  }
+#tooltip[data-show] {
+  display: block;
+}
 
-  #arrow {
-    visibility: hidden;
-  }
+#arrow,
+#arrow::before {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: inherit;
+}
 
-  #arrow::before {
-    visibility: visible;
-    content: '';
-    transform: rotate(45deg);
-  }
+#arrow {
+  visibility: hidden;
+}
 
   #tooltip[data-popper-placement^='bottom']>#arrow {
     top: -4px;
   }
+
+  #upload_widget {
+    background-color: #BEB4AA;
+    border: solid 2px #ffff;
+    color: black;
+  }
+#arrow::before {
+  visibility: visible;
+  content: '';
+  transform: rotate(45deg);
+}
+
+#tooltip[data-popper-placement^='bottom']>#arrow {
+  top: -4px;
+}
