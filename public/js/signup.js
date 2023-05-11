@@ -78,7 +78,7 @@ document.getElementById("upload_widget").addEventListener("click", function () {
   if (storedValue !== null)
   $(this).find(".description").val(storedValue);
 
-  console.log(textArea, storedValue)
+  // console.log(textArea, storedValue)
 
 // var historyDisplayEL = $('#search-history');
 
