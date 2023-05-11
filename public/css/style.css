@@ -116,3 +116,9 @@ display: block;
   #tooltip[data-popper-placement^='bottom']>#arrow {
     top: -4px;
   }
+
+  #upload_widget {
+    background-color: #BEB4AA;
+    border: solid 2px #ffff;
+    color: black;
+  }

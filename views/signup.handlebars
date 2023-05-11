@@ -22,27 +22,27 @@
                         <form id="login-form">
                             <div class="row">
                                 <div class="col">
-                                    <input type="text" class="form-control" id="first-name" placeholder="First name"
+                                    <input type="text" class="form-control" id="first-name" placeholder="first name"
                                         aria-label="First name" value={{firstName}}>
                                 </div>
 
                                 <div class="col">
                                     <input type="text" name= "last-name" id="last-name" class="form-control" placeholder="Last name"
-                                        aria-label="Last name">
+                                        aria-label="last name">
                                 </div>
                             </div>
                             <div class="mb-3">
-                                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                                <label for="exampleFormControlInput1" class="form-label">         </label>
                                 <input type="email" name="email" class="form-control" id="exampleFormControlInput1"
                                     placeholder="name@example.com">
                             </div>
-                            <div class="row g-3 align-items-center">
+                            {{!-- <div class="row g-3 align-items-center"> --}}
                                 <div class="col-auto">
-                                    <label for="inputPassword6" class="col-form-label">Password</label>
+                                    {{!-- <label for="inputPassword6" class="col-form-label">Password</label> --}}
                                 </div>
                                 <div class="col-auto">
-                                    <input type="password" name="password" id="inputPassword6" class="form-control"
-                                        aria-labelledby="passwordHelpInline">
+                                    <input type="password" id="inputPassword6" class="form-control"
+                                        aria-labelledby="passwordHelpInline" placeholder="password">
                                 </div>
                                 <div class="col-auto">
                                     <span id="passwordHelpInline" class="form-text">
@@ -53,23 +53,23 @@
                                     <label for="biographyform" class="'form-bio"></label>
                                     <input type="biography" id="biography" class="form-control" placeholder="write a little about yourself" value={{bio}}>
                                 </div>
-                            </div>
+                            {{!-- </div> --}}
                             {{!-- <label for="profile picture" class="form-label">Add a profile picture</label> --}}
                             <div class="input-group mb-3">
                                 {{!-- <input type="file" name="image" class="form-control" id="inputGroupFile02"> --}}
                                 {{!-- <label class="input-group-text" for="inputGroupFile02">Upload</label> --}}
                             </div>
-                                <button id="upload_widget" class="cloudinary-button" type="button">Add a profile picture</button>
+                                <button id="upload_widget" class="cloudinary-button" type="button" >Add a profile picture</button>
                             <div> 
                                 <label for="exampleDataList" class="form-label">Search for an interest</label>
                                 <input class="form-control" name="interest" list="datalistOptions" id="interests"
-                                    placeholder="Type to search...">
+                                    placeholder="interests">
                                 <datalist id="datalistOptions">
-                                    <option value="San Francisco">
-                                    <option value="New York">
-                                    <option value="Seattle">
-                                    <option value="Los Angeles">
-                                    <option value="Chicago">
+                                    <option value="Cats">
+                                    <option value="Tennis">
+                                    <option value="Skateboarding">
+                                    <option value="Video Games">
+                                    <option value="Boba">
                                 </datalist>
                             </div>
                                 <div id="liveAlertPlaceholder"></div>
