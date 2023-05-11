@@ -55,30 +55,31 @@ document.getElementById("upload_widget").addEventListener("click", function () {
   myWidget.open();
 }, false);
 
+form.addEventListener("submit", signup);
 
 
 
 
 // interest button functions
   // event listener for all elements with class "saveBtn"
-  $("#interest-button").on("click", function () {
+//   $("#interest-button").on("click", function () {
 
-    // get the parent ID and the value of the sibling textarea
-    var textArea = $(this).siblings("#interests").val();
+//     // get the parent ID and the value of the sibling textarea
+//     var textArea = $(this).siblings("#interests").val();
 
-// push to local
-    localStorage.setItem(textArea);
-    console.log(textArea);
-  });
+// // push to local
+//     localStorage.setItem(textArea);
+//     console.log(textArea);
+//   });
 
 
-// store to local
-  var storedValue = localStorage.getItem("textArea");
-// test LS 
-  if (storedValue !== null)
-  $(this).find(".description").val(storedValue);
+// // store to local
+//   var storedValue = localStorage.getItem("textArea");
+// // test LS 
+//   if (storedValue !== null)
+//   $(this).find(".description").val(storedValue);
 
-  console.log(textArea, storedValue)
+  // console.log(textArea, storedValue)
 
 // var historyDisplayEL = $('#search-history');
 
@@ -141,5 +142,4 @@ document.getElementById("upload_widget").addEventListener("click", function () {
 // return lsHistory;
 // }
 
-form.addEventListener("submit", signup);
 
