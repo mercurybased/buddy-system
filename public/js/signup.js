@@ -1,46 +1,18 @@
-// const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+let url = ''
 
-// const appendAlert = (message, type) => {
-//     const wrapper = document.createElement('div')
-//     wrapper.innerHTML = [
-//         `<div class="alert alert-${type} alert-dismissible" role="alert">`,
-//         `   <div>${message}</div>`,
-//         '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
-//         '</div>'
-//     ].join('')
-
-//     alertPlaceholder.append(wrapper)
-// }
-
-// async function signUpClick() {
-//     const alertTrigger = document.getElementById('liveAlertBtn')
-//     if (alertTrigger) {
-//         alertTrigger.addEventListener('click', () => {
-//             appendAlert('Account created', 'success')
-//         })
-//     }
-
-
-//     const pushProfile = document.querySelector("#liveAlertBtn").addEventListener("click", e => {
-//         e.preventDefault();
-
-//         if (alertTrigger) {
-//             alertTrigger.addEventListener('click', () => {
-//                 fetch("../views/profile", {
-//                     method: "POST",
-//                 }).then(res => {
-//                     if (res.ok) {
-//                         location.reload()
-//                     } else {
-//                         alert("trumpet sound")
-//                     }
-//                 })
-//             })
-//         }
-
-
-//     })
-// }
+var myWidget = cloudinary.createUploadWidget({
+    cloudName: 'de19jsefk', 
+    uploadPreset: 'wk5eacxt'},
+    (error, result) => { 
+      if (!error && result && result.event === "success") { 
+        console.log('Done! Here is the image info: ', result.info); 
+        url = result.info.url
+        console.log(url)
+      }
+    }
+  )
+  
+  
 const form = document.querySelector("#login-form");
 const submitBtn = document.querySelector("#liveAlertBtn");
 const userType = document.querySelector("#user-type");
@@ -58,8 +30,9 @@ const signup = async (e) => {
         firstName: document.querySelector("#first-name").value,
         lastName: document.querySelector("#last-name").value,
         password: document.querySelector("#inputPassword6").value,
-        biography: document.querySelector("#bio").value,
-        photoUrl: document.querySelector("#bio").value,
+        biography: document.querySelector("#biography").value,
+        interest: document.querySelector("#interests").value,
+        url
       }),
     });
     if (response.status === 200) {
@@ -70,4 +43,9 @@ const signup = async (e) => {
   }
 };
 
+document.getElementById("upload_widget").addEventListener("click", function(){
+    myWidget.open();
+  }, false);
+
 form.addEventListener("submit", signup);
+
