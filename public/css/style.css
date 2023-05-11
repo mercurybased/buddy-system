@@ -97,7 +97,9 @@ header {
   z-index: 1 !important;
   
 }
-
+.dropdown-menu {
+text-decoration: none;
+}
 
 .container-bg-home {
   /* position: fixed;
