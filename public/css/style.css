@@ -15,8 +15,8 @@
 figure {
   position: relative;
   display: flex;
-  align-items:center;
 }
+
 .profile-pic {
   /* align-items: end; */
   height: 100px;
@@ -24,6 +24,7 @@ figure {
   overflow: hidden;
   border-radius: 50%;
 }
+
 .profile-pic img{
   width: 100%;
   margin-top: -25px;
@@ -76,13 +77,13 @@ nav {
 }
 
 .container-bg-home {
-  position: fixed;
+  /* position: fixed;
   width: auto;
-  height: 100%;
+  height: 100%; */
   background-image: url("../Assets/white\ leaf\ shadow\ bg.png");
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
   background-size: cover;
-  background-position: center;
+  /* background-position: center; */
 
 }
 

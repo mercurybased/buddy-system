@@ -1,48 +1,46 @@
-<div class="row container-bg-profile">
+<div class="row">
     <!-- left column -->
-    <div class="col g-6">
-        <figure class="position-absolute top-50 start-50 translate-middle ratio ratio-1x1">
-            <img class="profile-pic" src="{{userData.photoUrl}}"  alt="profile picture">
-        </figure>
 
-    </div>
 
     <!-- right column -->
-    <div class="col g-6">
-        <div class="card m-6" style="background-color:#BEB4AA; height:100%; align-items:center;">
-            {{!-- <div class="card-header">Log In</div> --}}
-            <h2>{{userData.firstName}}'s page</h2>
-            <h3>Interests</h3>
-            {{!-- {{#each userData}} --}}
-            <ul>
-                {{#each userData.interests}}
-                <li>{{interest}}</li>
-                {{/each}}
-                {{!-- {{/each}} --}}
-            </ul>
-            <p>{{userData.biography}}</p>
-            <div>
+    <div class="card m-6" style="background-color:#BEB4AA; height:100%; align-items:center;">
+
+        <figure class="ratio-4x4">
+            <img class="ratio-4x4 profile-pic" src="{{userData.photoUrl}}" alt="profile picture">
+        </figure>
+        {{!-- <div class="card-header">Log In</div> --}}
+        <h2>{{userData.firstName}}'s page</h2>
+        <h3>Interests</h3>
+        {{!-- {{#each userData}} --}}
+        <ul>
+            {{#each userData.interests}}
+            <li>{{interest}}</li>
+            {{/each}}
+            {{!-- {{/each}} --}}
+        </ul>
+        <p>{{userData.biography}}</p>
+        <div>
 
 
-                <a href="/chat" class="btn btn-outline-light" role="button" data-bs-toggle="button" id="msgBtn">
-                
+            <a href="/chat" class="btn btn-outline-light" role="button" data-bs-toggle="button" id="msgBtn">
+
                 Start Chatting
                 <img src="/Assets/chat bubble icon.png" style="height: 40px; width:auto">
 
-                </a>
+            </a>
 
-                {{!-- <button type="button" class="btn btn-outline-light" id="msgBtn">
-                    Start Chatting
-                    
-                    <a href="/chat"></a>
-                </button> --}}
-                <div id="messages"></div>
-            </div>
-            <hr>
-            {{!-- {{/each}} --}}
+            {{!-- <button type="button" class="btn btn-outline-light" id="msgBtn">
+                Start Chatting
+
+                <a href="/chat"></a>
+            </button> --}}
+            <div id="messages"></div>
         </div>
-
+        <hr>
+        {{!-- {{/each}} --}}
     </div>
+
+
 
 
 
@@ -54,4 +52,4 @@
 <script src="/js/socket.js"></script>
 <script src="/js/cloud.js"></script>
 <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
-<script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript"></script> 
+<script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript"></script>
