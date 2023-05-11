@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { Interest, User} = require('../../models');
+
 // 
 // const sequelize = require('sequelize');
 // 
@@ -49,12 +50,12 @@ router.get('/', async (req,res) => {
 
 
 
-// // search by interest
-// router.get('/search',  (req, res) => {
-//   let {term}=req.query;
-//   term=term.toLowerCase();
-// User.findAll({where:{interest:term}})
-// .then (user=>res.render("search view to be added",{user}))
-// .catch  (err=>console.log(err));
-// // maybe replace user with interest 
-// });
+// search by interest
+router.get('/search',  (req, res) => {
+  let {term}=req.query;
+  term=term.toLowerCase();
+User.findAll({where:{interest:term}})
+.then (user=>res.render("search",{user}))
+.catch  (err=>console.log(err));
+// maybe replace user with interest 
+});
