@@ -55,6 +55,7 @@ document.getElementById("upload_widget").addEventListener("click", function () {
   myWidget.open();
 }, false);
 
+form.addEventListener("submit", signup);
 
 
 
@@ -141,5 +142,4 @@ document.getElementById("upload_widget").addEventListener("click", function () {
 // return lsHistory;
 // }
 
-form.addEventListener("submit", signup);
 
