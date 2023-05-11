@@ -79,7 +79,7 @@ router.get('/logout', (req,res) => {
   router.get('/search/:searchTerm', (req, res) => {
     let term = req.params.searchTerm;
     term = term.toLowerCase();
-    Interest.findAll({ where: { Interest: term } })
+    Interest.findAll({ where: { Interest:term } })
       .then(interests => {
         const mappedData = interests.map(interest => interest.get({ plain: true }));
         console.log(mappedData);
@@ -87,5 +87,4 @@ router.get('/logout', (req,res) => {
       })
       .catch(err => console.log(err));
   });
-  
 module.exports = router;
