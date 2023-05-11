@@ -1,9 +1,19 @@
 const router = require('express').Router();
 const { User, Interest } = require('../../models');
 
-router.get('/:id', async (req,res) => {
+router.get('/', async (req,res) => {
   try {
     const userData = await User.findAll({ include:  { all: true, nested: true } })
+    res.status(200).json(userData)
+  } catch (err) {
+    console.log(err)
+    res.status(500).json(err)
+  }
+})
+
+router.get('/:id', async (req,res) => {
+  try {
+    const userData = await User.findOne({ include:  { all: true, nested: true } })
     res.status(200).json(userData)
   } catch (err) {
     console.log(err)
