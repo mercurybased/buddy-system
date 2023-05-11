@@ -59,9 +59,9 @@
                     </ul>
 
 
-                    <form class="d-flex align-items-center flex-nowrap" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-dark" type="submit">Search</button>
+                    <form id="search" class="d-flex align-items-center flex-nowrap" role="search">
+                        <input id="search-term" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-dark" type="submit" >Search</button>
                     </form>
                 </div>
             </div>
@@ -72,5 +72,6 @@
         {{{body}}}
     </main>
 </body>
-
+  <script src="/controllers/api/interestRoutes.js"></script>
+  <script src="/js/search.js"></script>
 </html>

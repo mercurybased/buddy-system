@@ -40,11 +40,11 @@ router.get("/signup", (req, res) => {
         logged_in: req.session.logged_in
     })
 })
-router.get("/search", (req, res) => {
-    res.render("search", {
-        logged_in: req.session.logged_in
-    })
-})
+// router.get("/search", (req, res) => {
+//     res.render("search", {
+//         logged_in: req.session.logged_in
+//     })
+// })
 
 router.get("/profile", async (req, res) => {
     console.log(req.session)
@@ -77,6 +77,17 @@ router.get('/logout', (req, res) => {
         console.log(error)
         res.status(500).json(error)
     }
-})
-
+  })
+  router.get('/search/:searchTerm', (req, res) => {
+    let term = req.params.searchTerm;
+    term = term.toLowerCase();
+    Interest.findAll({ where: { Interest: term } })
+      .then(interests => {
+        const mappedData = interests.map(interest => interest.get({ plain: true }));
+        console.log(mappedData);
+        res.render("search", { interests: mappedData });
+      })
+      .catch(err => console.log(err));
+  });
+  
 module.exports = router;
