@@ -78,13 +78,19 @@ nav {
   padding: 2px
 }
 
+body {
+  background-image: url("../Assets/white\ leaf\ shadow\ bg.png");
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
 .container-bg-home {
   /* position: fixed;
   /* width: auto; */
   height: 100%;
   background-image: url("../Assets/white\ leaf\ shadow\ bg.png");
   /* background-repeat: no-repeat; */
-  background-size: cover;
+  height: 100%;
   /* background-position: center; */
 
 }
