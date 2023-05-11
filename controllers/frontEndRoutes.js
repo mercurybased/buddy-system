@@ -37,6 +37,11 @@ router.get("/signup", (req, res) => {
         logged_in: req.session.logged_in
     })
 })
+router.get("/search", (req, res) => {
+    res.render("search", {
+        logged_in: req.session.logged_in
+    })
+})
 
 router.get("/profile", async (req, res) => {
     if(!req.session.logged_in){

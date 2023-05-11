@@ -12,21 +12,24 @@
 
 
 /* profile picture formatting */
-figure {
+/* figure {
   position: relative;
   display: flex;
-  align-items:center;
-}
+} */
+
 .profile-pic {
   /* align-items: end; */
-  height: 100px;
+  /* height: 500px; */
   width: 100px;
   overflow: hidden;
   border-radius: 50%;
 }
+
 .profile-pic img{
-  width: 100%;
+  /* width: 100%; */
   margin-top: -25px;
+  /* width: auto; */
+  
 }
 
 
@@ -76,24 +79,20 @@ nav {
 }
 
 .container-bg-home {
-  position: fixed;
-  width: auto;
+  /* position: fixed;
+  /* width: auto; */
   height: 100%;
   background-image: url("../Assets/white\ leaf\ shadow\ bg.png");
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
   background-size: cover;
-  background-position: center;
+  /* background-position: center; */
 
 }
 
 .container-bg-chat {
-  position: fixed;
-  width: auto;
-  height: 100%;
   background-image: url("../Assets/green\ leaf\ shadow\ bg.png");
-  background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  height: 100%;
 
 }
 

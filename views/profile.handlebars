@@ -1,34 +1,57 @@
-<div class="row container-bg-profile">
+<div class="row">
     <!-- left column -->
     <div class="col g-6">
+<<<<<<< HEAD
         <figure class="position-absolute top-50 start-50 translate-middle ratio ratio-1x1">
             <img class="profile-pic" src={{userData.photoUrl}} alt="profile picture">
+=======
+        <figure class="ratio ratio-1x1 overflow-x-hidden">
+
+            <img class="img-thumbnail mx-auto  d-block rounded-circle" src="{{userData.photoUrl}}"
+                alt="profile picture">
+
+>>>>>>> dev
         </figure>
     </div>
 
     <!-- right column -->
-    <div class="col g-6">
-        <div class="card m-6" style="background-color:#BEB4AA; height:100%; align-items:center;">
-            {{!-- <div class="card-header">Log In</div> --}}
-            <h2>{{userData.firstName}}'s page</h2>
-            <h3>Interests</h3>
-            {{!-- {{#each userData}} --}}
-            <ul>
-                {{#each userData.interests}}
-                <li>{{interest}}</li>
-                {{/each}}
-                {{!-- {{/each}} --}}
-            </ul>
-            <p>{{userData.biography}}</p>
-            <div>
+    <div class="w-50 p-3">
+        <div class="card m-6 text-center" style="background-color:#BEB4AA; height:100%; align-items:center;">
+            <div class="card-body position-absolute top-50 start-50 translate-middle">
 
 
+<<<<<<< HEAD
                 <a href="/chat" class="btn btn-outline-light" role="button" data-bs-toggle="button" id="msgBtn">
 
                     Start Chatting
                     <img src="/Assets/chat bubble icon.png" style="height: 40px; width:auto">
+=======
+                {{!-- <div class="card-header">Log In</div> --}}
+                <h1 class="card-title">{{userData.firstName}}'s profile</h1>
+>>>>>>> dev
 
+                <p class="card-text">
+                <h3>Interests</h3>
+                {{!-- {{#each userData}} --}}
+                <ul>
+                    {{#each userData.interests}}
+                    <li>{{interest}}</li>
+                    {{/each}}
+                    {{!-- {{/each}} --}}
+                </ul>
+
+                <h3>Bio</h3>
+                {{userData.biography}}</p>
+
+
+                <a href="/chat">
+
+                    <button class="btn btn-outline-light" type="button" style="width:300px; height:50px;">
+                        Start Chatting
+                        <img src="/Assets/chat bubble icon.png" style="height: 40px; width:auto">
+                    </button>
                 </a>
+<<<<<<< HEAD
 
                 {{!-- <button type="button" class="btn btn-outline-light" id="msgBtn">
                     Start Chatting
@@ -36,15 +59,20 @@
                     <a href="/chat"></a>
                 </button> --}}
                 <div id="messages"></div>
+=======
+>>>>>>> dev
             </div>
-            <hr>
-            {{!-- {{/each}} --}}
         </div>
 
+
     </div>
+    <hr>
+</div>
 
 
 
+
+</div>
 </div>
 
 

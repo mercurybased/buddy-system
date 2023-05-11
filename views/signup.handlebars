@@ -1,89 +1,104 @@
-<body>
-    <main class="container-bg-home">
-        <!-- left column -->
-        <div class="row">
-            <div class="col g-6">
-                <div class="row g-0 position-relative">
-                    <div class="col-md-6 mb-md-0 p-md-4">
-                        <img src="../Assets/chingu_logo.png" class="w-100" alt="logo picture">
-                    </div>
-                    <div class="col-md-6 p-4 ps-md-0">
-                        <h2 class="mt-0">ChinguTalk</h2>
-                        <p>It's dangerous to go alone... use this!
-                        </p>
-                    </div>
-                </div>
+<div class="row">
+    <!-- left column -->
+    <div class="col g-6">
+        <div class="row g-0 position-relative">
+            <div class="col-md-6 mb-md-0 p-md-4">
+                <img src="../Assets/chingu_logo.png" class="w-100" alt="logo picture">
             </div>
-            <!-- right column -->
-            <div class="w-50 p-3">
-                <div class="card m-6" style="background-color:#BEB4AA; height:100%; align-items:center;">
-                    <div class="card-header">Sign Up</div>
-                    <div class="card-body">
-                        <form id="login-form">
-                            <div class="row">
-                                <div class="col">
-                                    <input type="text" class="form-control" id="first-name" placeholder="first name"
-                                        aria-label="First name" value={{firstName}}>
-                                </div>
-
-                                <div class="col">
-                                    <input type="text" name= "last-name" id="last-name" class="form-control" placeholder="Last name"
-                                        aria-label="last name">
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <label for="exampleFormControlInput1" class="form-label">         </label>
-                                <input type="email" name="email" class="form-control" id="exampleFormControlInput1"
-                                    placeholder="name@example.com">
-                            </div>
-                            {{!-- <div class="row g-3 align-items-center"> --}}
-                                <div class="col-auto">
-                                    {{!-- <label for="inputPassword6" class="col-form-label">Password</label> --}}
-                                </div>
-                                <div class="col-auto">
-                                    <input type="password" id="inputPassword6" class="form-control"
-                                        aria-labelledby="passwordHelpInline" placeholder="password">
-                                </div>
-                                <div class="col-auto">
-                                    <span id="passwordHelpInline" class="form-text">
-                                        Must be 8-20 characters long.
-                                    </span>
-                                </div>
-                                <div class="col-auto">
-                                    <label for="biographyform" class="'form-bio"></label>
-                                    <input type="biography" id="biography" class="form-control" placeholder="write a little about yourself" value={{bio}}>
-                                </div>
-                            {{!-- </div> --}}
-                            {{!-- <label for="profile picture" class="form-label">Add a profile picture</label> --}}
-                            <div class="input-group mb-3">
-                                {{!-- <input type="file" name="image" class="form-control" id="inputGroupFile02"> --}}
-                                {{!-- <label class="input-group-text" for="inputGroupFile02">Upload</label> --}}
-                            </div>
-                                <button id="upload_widget" class="cloudinary-button" type="button" >Add a profile picture</button>
-                            <div> 
-                                <label for="exampleDataList" class="form-label">Search for an interest</label>
-                                <input class="form-control" name="interest" list="datalistOptions" id="interests"
-                                    placeholder="interests">
-                                <datalist id="datalistOptions">
-                                    <option value="Cats">
-                                    <option value="Tennis">
-                                    <option value="Skateboarding">
-                                    <option value="Video Games">
-                                    <option value="Boba">
-                                </datalist>
-                            </div>
-                                <div id="liveAlertPlaceholder"></div>
-                                <button type="submit" class="btn mb-3 " id="liveAlertBtn" style="border: solid 2px #fff;" href="/profile">Complete Sign Up</button>
-
-                        </form>
-                        <p><a href="/login"
-                                class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Already
-                                have an account?</a></p>
-                    </div>
-                </div>
+            <div class="col-md-6 p-4 ps-md-0">
+                <h2 class="mt-0">ChinguTalk</h2>
+                <p>It's dangerous to go alone... use this!
+                </p>
             </div>
+        </div>
+    </div>
+    <!-- right column -->
+    <div class="w-50 p-3">
+        <div class="card m-6" style="background-color:#BEB4AA; height:100%; align-items:center;">
+            <div class="card-header">Sign Up</div>
+            <div class="card-body">
+                <form id="login-form">
+                    <div class="row">
+                        <div class="col">
+                            <input type="text" class="form-control" id="first-name" placeholder="first name"
+                                aria-label="First name" value={{firstName}}>
+                        </div>
 
-            <script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript"></script>
-        {{!-- <script src="/js/cloud.js"></script> --}}
-        <script src="/js/signup.js"></script>
-</body>
+                        <div class="col">
+                            <input type="text" name="last-name" id="last-name" class="form-control"
+                                placeholder="Last name" aria-label="last name" value={{lastName}}>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label"> </label>
+                        <input type="email" name="email" class="form-control" id="exampleFormControlInput1"
+                            placeholder="name@example.com" value={{email}}>
+                    </div>
+                    {{!-- <div class="row g-3 align-items-center"> --}}
+                        <div class="col-auto">
+                            {{!-- <label for="inputPassword6" class="col-form-label">Password</label> --}}
+                        </div>
+                        <div class="col-auto">
+                            <input type="password" id="inputPassword6" class="form-control"
+                                aria-labelledby="passwordHelpInline" placeholder="password" value={{password}}>
+                        </div>
+                        <div class="col-auto">
+                            <span id="passwordHelpInline" class="form-text">
+                                Must be 8-20 characters long.
+                            </span>
+                        </div>
+                        <div class="col-auto">
+                            <label for="biographyform" class="'form-bio"></label>
+                            <input type="biography" id="biography" class="form-control"
+                                placeholder="write a little about yourself" value={{bio}}>
+                        </div>
+
+                        <div>
+                            <label for="exampleFormControlInput1" class="form-label"> </label>
+                        </div>
+
+
+                        <button id="upload_widget" class="cloudinary-button" type="button">Add a profile
+                            picture</button>
+                        <div>
+                            <label for="exampleDataList" class="form-label">Search for an interest</label>
+                            <input class="form-control" name="interest" list="datalistOptions" id="interests"
+                                placeholder="interests">
+                            <datalist id="datalistOptions">
+                                <option value="Cats">
+                                <option value="Tennis">
+                                <option value="Skateboarding">
+                                <option value="Video Games">
+                                <option value="Boba">
+                            </datalist>
+                            <button type="button" id="interest-button" class="btn btn-outline-light"> Add Interest
+                            </button>
+                            <div id= "userInput">
+                                <ul>
+                                    {{#each userData.interests}}
+                                    <li>{{interest}}
+                                    </li>
+                                    {{/each}}
+                                </ul>
+
+                            </div>
+                        </div>
+
+
+                        <label for="exampleFormControlInput1" class="form-label"> </label>
+                        <div id="liveAlertPlaceholder"></div>
+                        <button type="submit" class="btn btn-outline-light" id="liveAlertBtn"
+                            style="border: solid 2px #fff;" href="/profile">Complete Sign Up</button>
+
+                </form>
+                <p><a href="/login"
+                        class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Already
+                        have an account?</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript"></script>
+    {{!--
+    <script src="/js/cloud.js"></script> --}}
+    <script src="/js/signup.js"></script>
