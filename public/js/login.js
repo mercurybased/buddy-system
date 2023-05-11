@@ -1,3 +1,4 @@
+console.log("hi")
 const form = document.querySelector("#login-form");
 
 const login = async (event) => {
@@ -17,6 +18,7 @@ const login = async (event) => {
       } else {
         alert('Failed to log in');
       }
+      console.log(response)
     }
   };
   console.log(login)
