@@ -18,6 +18,9 @@ router.get("/", (req, res) => {
     //     })
     // })
 // })
+router.get("/session", async (req, res) => {
+  res.json(req.session);
+});
 
 router.get("/chat" ,(req,res)=>{
     res.render("chat" ,{
