@@ -1,5 +1,12 @@
 let url = ''
 
+
+function myFunction() {
+  document.getElementById("background-image").
+  style.backgroundImage =rl("../Assets/white\ leaf\ shadow\ bg.png");
+}
+
+
 var myWidget = cloudinary.createUploadWidget({
   cloudName: 'de19jsefk',
   uploadPreset: 'wk5eacxt'
