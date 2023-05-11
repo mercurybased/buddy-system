@@ -61,7 +61,8 @@ router.get("/profile", async (req, res) => {
     console.log(user)
     // render profile, and send the userData
     res.render("profile", {
-        userData: user
+        userData: user,
+        logged_in: req.session.logged_in
     })
 })
 
@@ -69,9 +70,7 @@ router.get("/profile", async (req, res) => {
 router.get('/logout', (req, res) => {
     console.log("loggin out!!")
     try {
-        res.render("logout", {
-            logged_in: req.session.logged_in
-        })
+        res.render("logout")
         req.session.destroy()
         res.status(200).json({ msg: "logged out successfully" })
     } catch (error) {
