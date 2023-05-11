@@ -29,7 +29,14 @@ router.get('/:id', async (req,res) => {
 
 router.post('/', async (req, res) => {
   try {    
-    const newUser = await User.create(req.body);
+    const newUser = await User.create({
+      email:req.body.email,
+      firstName:req.body.firstName,
+      lastName:req.body.lastName,
+      password:req.body.password,
+      biography:req.body.biography,
+      photoUrl:req.body.url
+    });
     const newInterest = await Interest.create({user_id:newUser.id, interest:req.body.interest})
     
     req.session.save( () => {
