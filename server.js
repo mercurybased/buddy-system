@@ -32,9 +32,19 @@ app.get('/', (req, res) => {
 });
 io.on('connection', (socket) => {
   socket.on('chat message', msg => {
+    
     //object with message inside of it with an id
+    //io.to(user1.id).to(user2.id).emit('startChat', [user1.userId, user2.userId]);
+   
     //if statement where you emit to certain person if there ids paired
+    //if (user1==user2) {
+     // console.log('Message:',);
+    ///} else {
+   //
     //save messages to models
+    
+    
+    
     io.emit('chat message', msg);
   });
 });
