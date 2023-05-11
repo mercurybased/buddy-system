@@ -44,6 +44,7 @@ router.get("/search", (req, res) => {
 })
 
 router.get("/profile", async (req, res) => {
+        console.log(req.session)
     if(!req.session.logged_in){
         return res.redirect("/login")
     }
