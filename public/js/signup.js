@@ -73,7 +73,7 @@ document.getElementById("upload_widget").addEventListener("click", function () {
 
 
 // store to local
-  var storedValue = localStorage.getItem(textArea);
+  var storedValue = localStorage.getItem("textArea");
 // test LS 
   if (storedValue !== null)
   $(this).find(".description").val(storedValue);

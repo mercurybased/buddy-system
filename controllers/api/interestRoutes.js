@@ -43,19 +43,14 @@ router.get('/', async (req,res) => {
       res.status(500).json(err);
     }
   });
-
-  module.exports = router
-
-
-
-
-
 // search by interest
 router.get('/search',  (req, res) => {
   let {term}=req.query;
   term=term.toLowerCase();
-User.findAll({where:{interest:term}})
+Interest.findAll({where:{Interest:term}})
+map(user=>user.get({plain:true}))
 .then (user=>res.render("search",{user}))
 .catch  (err=>console.log(err));
-// maybe replace user with interest 
 });
+
+module.exports = router
