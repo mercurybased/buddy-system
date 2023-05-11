@@ -25,7 +25,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="">
         <nav class="navbar navbar-expand-lg">
 
             <div class=" container-fluid">
@@ -39,24 +39,16 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="--bs-scroll-height: 100px;">
-                        <li class="nav-item">
-                            {{#if logged_in}}
-                            <a class="nav-link active" aria-current="page" href="/profile">Home</a>
-                            {{else}}
-                            <a class="nav-link active" aria-current="page" href="/">Home</a>
-                            {{/if}}
-                        </li>
-
 
                         <li class="nav-item dropdown">
                             {{#if logged_in}}
                             <a class="nav-link dropdown-toggle" href="/profile" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
-                                Profile
+                                {{userData.firstName}} is signed in
                             </a>
                             <ul class="dropdown-menu">
-                                <button class="btn" type="submit" id="logout">Logout</button>
-                                <script src="/js/logout.js"></script>
+                                <li><a class="dropdown-item" href="/profile">Update Profile</a></li>
+                                <li><a class="dropdown-item" href="/logout">Logout</a></li>
                             </ul>
 
                             {{else}}
@@ -79,10 +71,6 @@
     <main>
         {{{body}}}
     </main>
-
-
-    <footer>
-    </footer>
 </body>
   <script src="/controllers/api/interestRoutes.js"></script>
   <script src="/js/search.js"></script>
