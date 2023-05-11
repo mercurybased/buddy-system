@@ -45,7 +45,7 @@ router.post("/", async (req, res) => {
       user_id: newUser.id,
       interest: req.body.interest,
     });   
-      req.session.userId = newUser.id;
+      req.session.user_id = newUser.id;
       req.session.email = newUser.email;
       req.session.logged_in=true;
     res.status(200).json(newUser);
@@ -55,9 +55,7 @@ router.post("/", async (req, res) => {
   }
 });
 
-router.get("/session", async (req, res) => {
-  res.json(req.session);
-});
+
 
 router.post("/login", async (req, res) => {
   try {
@@ -80,6 +78,7 @@ router.post("/login", async (req, res) => {
       return;
     }    
       req.session.user_id = userData.id;
+      req.session.email = userData.email;
       req.session.logged_in = true;
       
     res.json({ user: userData, message: "You are now logged in!" });
