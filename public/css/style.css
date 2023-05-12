@@ -15,6 +15,7 @@
   padding: 0;
   box-sizing: border-box;
   flex-wrap: wrap;
+  color: var(--txt-dark-brown)
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Raleway&family=Rubik:wght@600&display=swap');
