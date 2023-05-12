@@ -84,11 +84,11 @@ router.get('/logout', (req, res) => {
   router.get('/search/:searchTerm', (req, res) => {
     let term = req.params.searchTerm;
     term = term.toLowerCase();
-    Interest.findAll({ where: { Interest:term } })
+    Interest.findAll({ where: { Interest:term }, include: {model: User} })
       .then(interests => {
         const mappedData = interests.map(interest => interest.get({ plain: true }));
-        console.log(mappedData);
-        res.render("search", { interests: mappedData, searchTerm:term });
+        console.log(mappedData[0].users);
+        res.render("search", { users: mappedData[0].users, searchTerm:term });
       })
       .catch(err => console.log(err));
   });

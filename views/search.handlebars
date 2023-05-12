@@ -11,23 +11,14 @@
             </tr>
         </thead>
         <tbody>
+            {{#each users}}
             <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-
+                <td>{{id}}</td>
+                <td>{{firstName}}</td>
+                <td>{{lastName}}</td>
             </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
 
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-
-            </tr>
+            {{/each}}
         </tbody>
     </table>
 </div>
