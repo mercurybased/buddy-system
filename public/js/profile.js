@@ -74,10 +74,32 @@ const changePhoto = async () => {
   document.getElementById("upload_widget").addEventListener("click", function () {
     myWidget.open();
   }, false);
+  
+
+  const changeBio = async () => {
+    const biography = document.getElementById('biography').value;
+    console.log(biography);
+      if (true) {
+          const response = await fetch ("/api/users/profile/bio", {
+           method: "PUT",
+           headers: { "Content-Type": "application/json"},
+           body: JSON.stringify ({
+               biography:biography
+           })
+       })
+       console.log(response);
+       if (response.status === 200) {
+           window.location.assign("/profile")
+        } else {
+            alert("please enter something or exit out")
+   }
+}
+}
 // leave button 
-const myModalAlternative = new bootstrap.Modal('#bioModal', options)
-const myModalAlternative2 = new bootstrap.Modal('#interestModal', options)
-const myModalAlternative3 = new bootstrap.Modal('#pictureModal', options)
+const myModalAlternative = new bootstrap.Modal('#bioModal', {backdrop: "static"} )
+const myModalAlternative2 = new bootstrap.Modal('#interestModal', {backdrop: "static"})
+// const myModalAlternative3 = new bootstrap.Modal('#pictureModal', {backdrop: "static"})
+document.getElementById("bio-save-btn").addEventListener("click", changeBio)
 
 // const exampleModal = document.getElementById('exampleModal')
 // if (exampleModal) {

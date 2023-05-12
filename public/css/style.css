@@ -180,11 +180,11 @@ h2.home {
     top: -4px;
   }
 
-  /* #upload_widget {
+  #upload_widget {
     background-color: #BEB4AA;
     border: solid 2px #ffff;
-    color: black; */
-  /* } */
+    color: black;
+  }
 #arrow::before {
   visibility: visible;
   content: '';
