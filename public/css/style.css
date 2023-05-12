@@ -122,10 +122,7 @@ h2.home {
   color: var(--txt-dark-brown);
 };
 
-/* signup details */
-.card-header {
-c
-}
+
 
 /* profile page */
 .profile-pic {
@@ -183,11 +180,11 @@ c
     top: -4px;
   }
 
-  #upload_widget {
+  /* #upload_widget {
     background-color: #BEB4AA;
     border: solid 2px #ffff;
-    color: black;
-  }
+    color: black; */
+  /* } */
 #arrow::before {
   visibility: visible;
   content: '';
