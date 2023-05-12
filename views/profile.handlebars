@@ -4,10 +4,8 @@
         <div class="col-md-4">
             <img src={{userData.photoUrl}} class="img-fluid ratio ratio-1x1 mx-auto  d-block rounded-circle"
                 alt="profile picture">
-            <button id="upload_widget" class="cloudinary-button" type="button">Add or change your profile
-                picture</button>
-                {{!-- A second button is shown that submits a "form", and that ubtton only 
-                shows when the url variable is !"" (not an empty string) --}}
+
+
         </div>
 
 
@@ -27,8 +25,11 @@
                                 Biography</a></li>
                         <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2"
                                 id="interestModal">Update Interest</a></li>
-                        <li><a class="dropdown-item" href="#" ata-bs-toggle="modal" data-bs-target="#exampleModal3"
-                                id="pictureModal">Update Profile Picture</a></li>
+                        <li><a class="dropdown-item" href="#" id="upload_widget" style="background-color: none;">Update
+                                Profile Picture</a></li>
+                        {{!-- 
+                        <button id="upload_widget" class="cloudinary-button" type="button">Add or change your profile
+                            picture</button> --}}
                     </ul>
                 </div>
 
@@ -115,8 +116,12 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <button id="upload_widget" class="cloudinary-button" type="button"></button>
+
+                {{!-- A second button is shown that submits a "form", and that ubtton only 
+                                shows when the url variable is !"" (not an empty string) --}}
             </div>
+
+
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-primary" id="leave-btn" href="#">Save</button>
@@ -124,6 +129,7 @@
         </div>
     </div>
 </div>
+
 
 
 
