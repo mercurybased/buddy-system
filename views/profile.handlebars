@@ -13,6 +13,21 @@
 
                 <h5 class="card-title">{{userData.firstName}} {{userData.lastName}}</h5>
 
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                        style="font-size: 30px;">Update My Profile
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                id="bioModal">Update
+                                Biography</a></li>
+                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2"
+                                id="interestModal">Update Interest</a></li>
+                        <li><a class="dropdown-item" href="#" ata-bs-toggle="modal" data-bs-target="#exampleModal3"
+                                id="pictureModal">Update Profile Picture</a></li>
+                    </ul>
+                </div>
+
                 <p class="card-text">Interests</p>
                 <p class="card-text"><small class="text-body-secondary">
                         <ul>
@@ -31,20 +46,7 @@
                     </button>
                 </a>
 
-                <div class="dropdown">
-                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"
-                        style="font-size: 30px;">
-                        Update My Profile
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                id="bioModal">Update Biography</a></li>
-                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2"
-                                id="interestModal">Update Interest</a></li>
-                        <li><a class="dropdown-item" href="#" ata-bs-toggle="modal" data-bs-target="#exampleModal3"
-                                id="pictureModal">Update Profile Picture</a></li>
-                    </ul>
-                </div>
+
 
                 {{!-- <button id="upload_widget" class="cloudinary-button" type="button">Add a profile
                     picture</button> --}}
