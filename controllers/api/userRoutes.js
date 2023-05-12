@@ -72,6 +72,18 @@ router.put("/profile", async (req, res) => {
     res.status(500).json(error);
   }
 });
+router.put("/profile/bio", async (req, res) => {
+  try {
+   
+    // await User.update({ biography: req.body.biography }, { where: { id: req.session.user_id } });
+    const user = await User.update({ biography: req.body.biography }, { where: { id: req.session.user_id } });
+    console.log(user)
+    res.status(200).json(user);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json(error);
+  }
+});
 
 
 
