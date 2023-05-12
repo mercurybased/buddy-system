@@ -4,8 +4,7 @@
         <div class="col-md-4">
             <img src={{userData.photoUrl}} class="img-fluid ratio ratio-1x1 mx-auto  d-block rounded-circle"
                 alt="profile picture">
-            <button id="upload_widget" class="cloudinary-button" type="button">Add a profile
-                picture</button>
+
         </div>
 
 
@@ -27,13 +26,32 @@
                 <p class="card-text">Bio</p>
                 <p class="card-text"><small class="text-body-secondary">{{userData.biography}}</small></p>
                 <a href="/chat">
-
                     <button class="btn btn-outline-light" type="button" style="width:80%; height:50px;">
                         Start Chatting
                         <img src="/Assets/chat bubble icon.png" style="height: 40px; width:auto">
                     </button>
                 </a>
-                
+                <button id="upload_widget" class="cloudinary-button" type="button">Add a profile
+                    picture</button>
+
+                <div class="modal" tabindex="-1">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">update bio</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Modal body text goes here.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
