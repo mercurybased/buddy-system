@@ -24,6 +24,8 @@ router.get("/session", async (req, res) => {
 
 router.get("/chat", (req, res) => {
     res.render("chat", {
+        backgroundImage: "url(/Assets/greenLeaf.png)", 
+        userData: {firstName:req.session.userName},
         logged_in: req.session.logged_in
     })
 })
@@ -61,6 +63,7 @@ router.get("/profile", async (req, res) => {
     console.log(user)
     // render profile, and send the userData
     res.render("profile", {
+        backgroundImage: "url(/Assets/linen.png)", 
         userData: user,
         logged_in: req.session.logged_in
     })
@@ -72,7 +75,6 @@ router.get('/logout', (req, res) => {
     try {
         res.render("logout")
         req.session.destroy()
-        res.status(200).json({ msg: "logged out successfully" })
     } catch (error) {
         console.log(error)
         res.status(500).json(error)
@@ -86,7 +88,7 @@ router.get('/logout', (req, res) => {
       .then(interests => {
         const mappedData = interests.map(interest => interest.get({ plain: true }));
         console.log(mappedData);
-        res.render("search", { interests: mappedData });
+        res.render("search", { interests: mappedData, searchTerm:term });
       })
       .catch(err => console.log(err));
   });

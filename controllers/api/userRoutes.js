@@ -33,6 +33,14 @@ router.get("/:id", async (req, res) => {
 
 router.post("/", async (req, res) => {
   try {
+    const interest = await Interest.findOne({where: {interest: req.body.interest}})
+    let newInterest;
+    if (!interest){
+      newInterest = await Interest.create({
+        // user_id: newUser.id
+        interest: req.body.interest,
+      });   
+    }
     const newUser = await User.create({
       email: req.body.email,
       firstName: req.body.firstName,
@@ -40,11 +48,8 @@ router.post("/", async (req, res) => {
       password: req.body.password,
       biography: req.body.biography,
       photoUrl: req.body.url,
+      interest_id: interest?.id || newInterest.id
     });
-    const newInterest = await Interest.create({
-      user_id: newUser.id,
-      interest: req.body.interest,
-    });   
       req.session.user_id = newUser.id;
       req.session.email = newUser.email;
       req.session.logged_in=true;
@@ -79,6 +84,7 @@ router.post("/login", async (req, res) => {
     }    
       req.session.user_id = userData.id;
       req.session.email = userData.email;
+      req.session.userName =  userData.firstName;
       req.session.logged_in = true;
       
     res.json({ user: userData, message: "You are now logged in!" });
