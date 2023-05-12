@@ -1,52 +1,79 @@
-<div class="container-fluid" style="background-color: salmon">
+<div class="row" style="margin:5px;">
+    {{!-- leave button --}}
+    
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal" 
+style="width:20%; height: auto; margin: 10px; display:flexbox; flex-wrap:wrap">
+  leave
+</button>
 
-<div class="row">
-    <div id="messages"></div>
-    {{!-- <div class="container">
-        {{#each message}}
-        <img src="{{user2Image}}" alt="Avatar">
-        <p>{{messageBody}}</p>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Do you want to leave? It's scary out there...</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Are you sure you want to leave? All chats will be lost.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <a href="/profile">
+        <button type="button" class="btn btn-primary" id="leave-btn" href="/profile">Leave room</button>
+        </a>
+      </div>
     </div>
-
-    <div class="container darker">
-        {{name}}
-        <img src="{{userImage}}" alt="Avatar" class="right">
-        <p>{{message}}</p>
-    </div>
-
-    <div class="container">
-        {{name}}
-        <img src="{{user2Image}}" alt="Avatar">
-        <p>{{message}}</p>
-    </div>
-
-    <div class="container darker">
-        {{name}}
-        <img src="{{userImage}}" alt="Avatar" class="right">
-        <p>{{message}}</p>
-    </div>
-    {{/each}}
- --}}
-
-<div class="d-flex justify-content-evenly fixed-bottom" style="background-color:#BEB4AA">
-    <div class="col-9">
-        <textarea class="form-control" id="message" rows="3"></textarea>
-    </div>
-
-    <div class="col">
-        <button type="button" class="btn" id="saveBtn">
-
-            <img src="/Assets/chat bubble icon.png" style="height:40px; width:auto;">
-
-        </button>
-    </div>
+  </div>
 </div>
-</div>
+{{!-- 
+    <div class="row"> --}}
+        <div class="messages"></div>
+        {{!-- <div class="col-md-4">
+            <img src={{userData.photoUrl}} class="img-fluid ratio ratio-1x1 mx-auto  d-block rounded-circle"
+                alt="profile picture">
+        </div> --}}
 
 
 
-</div>
+{{!-- 
+        <div class="row fixed-bottom"
+            style="background-color:#E4DAD1; height: 150px; align-items: center; justify-content:center; width:100%; display: flex; flex-wrap:wrap;">
 
-{{!-- <script src="/js/chat.js"></script> --}}
+            <div class="col" style="flex: 0 0 85%;">
+                <textarea class="form-control" id="message" rows="4"></textarea>
+            </div>
+
+            <div class="col">
+                <button type="button" class="btn" id="saveBtn">
+
+                    <img src="/Assets/chat bubble icon.png" style="height:70px; width:auto;">
+
+                </button>
+            </div>
+        </div>
+    </div> --}}
+
+
+    {{!-- testing code starts here --}}
+       <ul id="messages"></ul>
+
+            {{!-- <div class="row"
+            style="background-color:#E4DAD1; height: 150px; align-items: center; justify-content:center; width:100%; display: flex; flex-wrap:wrap;"> --}}
+
+            <form id="form" action="">
+                <input class="form-control" id="input" autocomplete="off" rows="4"/>
+                <button type="button" class="btn">
+
+                    <img src="/Assets/chat bubble icon.png" style="height:70px; width:auto;">
+
+                </button>
+            </form>
+        {{!-- </div> --}}
+
+<script src="/js/message.js"></script>
 <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
 <script src="/js/socket.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.2/qs.min.js"
+    integrity="sha256-TDxXjkAUay70ae/QJBEpGKkpVslXaHHayklIVglFRT4=" crossorigin="anonymous"></script>
