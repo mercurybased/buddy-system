@@ -60,6 +60,20 @@ router.post("/", async (req, res) => {
   }
 });
 
+router.put("/profile", async (req, res) => {
+  try {
+    console.log(req.session);
+    await User.update({ photoUrl: req.body.photoUrl }, { where: { id: req.session.user_id } });
+    const user = await User.findOne({ where: { id: req.session.user_id } });
+    console.log(user)
+    res.status(200).json(user);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json(error);
+  }
+});
+
+
 
 
 router.post("/login", async (req, res) => {
