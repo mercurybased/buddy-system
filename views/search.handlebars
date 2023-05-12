@@ -1,22 +1,7 @@
-<div class="row">
-    <!-- left column -->
-    <div class="col g-6">
-        <div class="row">
-                <ul class="list-group list-group-flush">
-                    {{#each interests}}
-                    <li class="list-group-item">{{interest}}</li>
-                    {{/each}}
-                    <li class="list-group-item"></li>
-                    <li class="list-group-item"></li>
-                </ul>
-            </div>
-
-        </div>
-    </div>
 
 <!-- right column -->
 <div class="col g-6">
-
+    <h2>{{searchTerm}}</h2>
     <table class="table">
         <thead>
             <tr>
@@ -49,4 +34,4 @@
 
 <script src="/js/search.js"></script>
 <script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript"></script>
-<script src="/controllers/api/interestRoutes.js"></script>
+{{!-- <script src="/controllers/api/interestRoutes.js"></script> --}}
