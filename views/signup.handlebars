@@ -1,21 +1,41 @@
 <div class="row">
     <!-- left column -->
-    <div class="col g-6">
-        <div class="row g-0 position-relative">
-            <div class="col-md-6 mb-md-0 p-md-4">
+    <div class="col">
+        {{!-- left column details --}}
+        <div class="row">
+            <div class="col">
                 <img src="../Assets/chingu_logo.png" class="w-100" alt="logo picture">
             </div>
-            <div class="col-md-6 p-4 ps-md-0">
-                <h2 class="mt-0">ChinguTalk</h2>
-                <p>It's dangerous to go alone... use this!
+            <div class="col" style="display:flexbox; text-align:center;">
+                <h2 class="mt-0 home" style="width:100%; height: 50px;">ChinguTalk</h2>
+
+                <p id="button" aria-describedby="tooltip">It's
+                    dangerous to go alone... use this!
                 </p>
+
+                <div class="mt-0 home" id="tooltip" role="tooltip" style="flex-wrap:wrap">
+                    <h2>
+                        Chingu is the korean word for friends
+                    </h2>
+                    <p>
+                        Whether you are in a new location and want to connect with someone or your friends
+                        aren’t free you can connect with companions to accompany you on local outings or online
+                        friends for your next Monster Hunter raid because you can’t kill Almudron by yourself.
+                    </p>
+
+                    <div id="arrow" data-popper-arrow></div>
+
+                </div>
+
             </div>
         </div>
+
     </div>
+
     <!-- right column -->
     <div class="w-50 p-3">
         <div class="card m-6" style="background-color:#BEB4AA; height:100%; align-items:center;">
-            <div class="card-header">Sign Up</div>
+            <div class="card-header" style="font-family: 'Libre Baskerville';  font-size: 25px;  letter-spacing: 6px;  color: var(--txt-dark-brown);">Sign Up</div>
             <div class="card-body">
                 <form id="login-form">
                     <div class="row">

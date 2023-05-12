@@ -63,6 +63,7 @@ router.get("/profile", async (req, res) => {
     console.log(user)
     // render profile, and send the userData
     res.render("profile", {
+        backgroundImage: "url(/Assets/linen.png)", 
         userData: user,
         logged_in: req.session.logged_in
     })

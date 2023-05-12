@@ -7,75 +7,59 @@
   --bg-light-green: #CDCFC0;
   --txt-green: #223D3C;
 }
+*{
+  font-family: 'Libre Baskerville', serif;
+  font-family: 'Rubik', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Raleway&family=Rubik:wght@600&display=swap');
 
 
-/* profile picture formatting */
-/* figure {
-  position: relative;
-  display: flex;
-} */
-
-.profile-pic {
-  /* align-items: end; */
-  /* height: 500px; */
-  width: 100px;
-  overflow: hidden;
-  border-radius: 50%;
-}
-
-.profile-pic img{
-  /* width: 100%; */
-  margin-top: -25px;
-  /* width: auto; */
-  
-}
-
-
-
-.navbar-brand {
-  font-family: 'Libre Baskerville'
+/* universals */
+a.navbar-brand {
+  font-family: 'Libre Baskerville';
+  font-size: 35px;
+  letter-spacing: 5px;
+  color: var(--txt-dark-brown);
 };
 
-.home h2 {
-  font-family: 'Libre Baskerville'
-};
+a#is-sign-in {
+  font-family: 'Libre Baskerville';
+  font-size: 10px;
+}
+
+.dropdown-item{
+  font-family: 'Raleway';
+  font-size: 15px;
+}
+
 
 p {
-  font-family: 'Raleway'
+  font-family: 'Raleway';
+  font-size:25px;
 };
 
 .btn {
   font-family:'Rubik'
 };
-*{
-  font-family: 'Libre Baskerville', serif;
-  font-family: 'Raleway', sans-serif;
-  font-family: 'Rubik', sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  flex-wrap: wrap;
+
+
+h3 {
+  font-family: 'Libre Baskerville';
 }
 
-/* 
-nav {
-  background-color: rgba(255, 255, 255, 0.024);
-  backdrop-filter: blur(6.6px);
-} */
-
-
-* {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  flex-wrap: wrap;
+li {
+  list-style: none;
+  font-family:'Raleway';
+  font-size: 30px;
 }
-
-.card-body {
-  padding: 2px
+ul {
+  list-style-type: none;
 }
 
 body {
@@ -89,7 +73,6 @@ main {
   display:flex; 
   flex-direction:column; 
   justify-content:center;
-  /* min-height:100vh; */
   margin:0 auto; 
 }
 
@@ -97,38 +80,64 @@ header {
   z-index: 1 !important;
   
 }
+
 .dropdown-menu {
 text-decoration: none;
 }
 
-.container-bg-home {
-  /* position: fixed;
-  /* width: auto; */
-  height: 100%;
-  background-image: url("../Assets/white\ leaf\ shadow\ bg.png");
-  /* background-repeat: no-repeat; */
-  height: 100%;
-  /* background-position: center; */
-
+/* card details */
+.card-title {
+  font-family: 'Libre Baskerville';
+  font-size: 60px;
+  letter-spacing: 3px;
+  text-align: center;
+}
+h5.card-title {
+  color: var(--navy);
 }
 
-.container-bg-chat {
-  background-image: url("../Assets/green\ leaf\ shadow\ bg.png");
-  background-size: cover;
-  height: 100%;
-
+.card-body {
+  padding: 2px
+}
+.text-body-secondary {
+  font-family:'Raleway';
+  font-size: 30px;
+}
+.card-text {
+  font-family: 'Libre Baskerville';
+  font-size: 40px;
 }
 
-.container-bg-profile {
-  position: fixed;
-  /* width: auto;
-    height: 100% */
-  background-image: url("../Assets/linen\ bg.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-
+.card-bio {
+  font-family:'Raleway';
+  font-size: 25px;
 }
+
+/* home details */
+h2.home {
+  font-family: 'Libre Baskerville';
+  font-size: 40px;
+  letter-spacing: 5px;
+  color: var(--txt-dark-brown);
+};
+
+/* signup details */
+.card-header {
+c
+}
+
+/* profile page */
+.profile-pic {
+  width: 100px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.profile-pic img{
+  margin-top: -25px;
+}
+
+/* tooltip */
 
 #tooltip h2 {
   font-size: 15px;
