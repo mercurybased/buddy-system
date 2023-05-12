@@ -4,8 +4,8 @@
         <div class="col-md-4">
             <img src={{userData.photoUrl}} class="img-fluid ratio ratio-1x1 mx-auto  d-block rounded-circle"
                 alt="profile picture">
-            <button id="upload_widget" class="cloudinary-button" type="button">Add or change your profile
-                picture</button>
+            {{!-- <button id="upload_widget" class="cloudinary-button" type="button">Add or change your profile --}}
+                {{!-- picture</button> --}}
                 {{!-- A second button is shown that submits a "form", and that ubtton only 
                 shows when the url variable is !"" (not an empty string) --}}
         </div>
@@ -45,7 +45,7 @@
                                 id="bioModal">Update Biography</a></li>
                         <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2"
                                 id="interestModal">Update Interest</a></li>
-                        <li><a class="dropdown-item" href="#" ata-bs-toggle="modal" data-bs-target="#exampleModal3"
+                        <li><a id="upload_widget" class="dropdown-item" href="#" ata-bs-toggle="modal" data-bs-target="#exampleModal3"
                                 id="pictureModal">Update Profile Picture</a></li>
                     </ul>
                 </div>
