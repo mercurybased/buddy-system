@@ -24,6 +24,8 @@ router.get("/session", async (req, res) => {
 
 router.get("/chat", (req, res) => {
     res.render("chat", {
+        backgroundImage: "url(/Assets/greenLeaf.png)", 
+        userData: {firstName:req.session.userName},
         logged_in: req.session.logged_in
     })
 })
@@ -72,7 +74,6 @@ router.get('/logout', (req, res) => {
     try {
         res.render("logout")
         req.session.destroy()
-        res.status(200).json({ msg: "logged out successfully" })
     } catch (error) {
         console.log(error)
         res.status(500).json(error)
