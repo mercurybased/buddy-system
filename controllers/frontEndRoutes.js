@@ -86,7 +86,7 @@ router.get('/logout', (req, res) => {
       .then(interests => {
         const mappedData = interests.map(interest => interest.get({ plain: true }));
         console.log(mappedData);
-        res.render("search", { interests: mappedData });
+        res.render("search", { interests: mappedData, searchTerm:term });
       })
       .catch(err => console.log(err));
   });
