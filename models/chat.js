@@ -1,19 +1,12 @@
-//const { Model, DataTypes } = require('socket.io');
-//const chat = require('./chat');
+const moment = require('moment');
 
-//var server = require('http').createServer(app);
-//var io = require('socket.io')(server);
+function formatMessage(username, text) {
+  return {
+    username,
+    text,
+    time: moment().format('h:mm a')
+  };
+}
 
+module.exports = formatMessage;
 
-
-
-
-
-
-
-
-
-
-
-
-//module.exports = chat;
