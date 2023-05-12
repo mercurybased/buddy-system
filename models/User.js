@@ -39,13 +39,13 @@ User.init(
         len: [8],
       },
     },
-    interests: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'interest',
-        key: 'id'        
-      }
-    },
+    // interests: {
+    //   type: DataTypes.INTEGER,
+    //   references: {
+    //     model: 'interest',
+    //     key: 'id'        
+    //   }
+    // },
     biography: {
       type: DataTypes.TEXT,
       allowNull:true
