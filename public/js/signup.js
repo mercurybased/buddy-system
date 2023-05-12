@@ -67,6 +67,7 @@ const signup = async (e) => {
   // check if farmer or customer
   e.preventDefault();
   // farmer signup
+
   if (true) {
     const response = await fetch("/api/users", {
       method: "POST",
@@ -81,6 +82,7 @@ const signup = async (e) => {
         url
       }),
     });
+console.log(response);
     if (response.status === 200) {
       window.location.assign("/profile")
     } else {
