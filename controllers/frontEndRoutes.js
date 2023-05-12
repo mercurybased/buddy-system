@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { User, Post } = require('../models');
+const { User, Interest } = require('../models');
 
 router.get("/", (req, res) => {
     res.render("home", {
@@ -77,7 +77,8 @@ router.get('/logout', (req, res) => {
         console.log(error)
         res.status(500).json(error)
     }
-  })
+  });
+  
   router.get('/search/:searchTerm', (req, res) => {
     let term = req.params.searchTerm;
     term = term.toLowerCase();
