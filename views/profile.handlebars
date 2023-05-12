@@ -30,27 +30,90 @@
                         <img src="/Assets/chat bubble icon.png" style="height: 40px; width:auto">
                     </button>
                 </a>
-                <button id="upload_widget" class="cloudinary-button" type="button">Add a profile
-                    picture</button>
 
-                <div class="modal" tabindex="-1">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title">update bio</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <p>Modal body text goes here.</p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
-                            </div>
-                        </div>
-                    </div>
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                        style="font-size: 30px;">
+                        Update My Profile
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                id="bioModal">Update Biography</a></li>
+                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2"
+                                id="interestModal">Update Interest</a></li>
+                        <li><a class="dropdown-item" href="#" ata-bs-toggle="modal" data-bs-target="#exampleModal3"
+                                id="pictureModal">Update Profile Picture</a></li>
+                    </ul>
                 </div>
+
+                {{!-- <button id="upload_widget" class="cloudinary-button" type="button">Add a profile
+                    picture</button> --}}
+
+            </div>
+        </div>
+    </div>
+</div>
+{{!-- bio modal --}}
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Update the Bio</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form><textarea type="biography" id="biography" class="form-control"
+                        placeholder="write a little about yourself" value={{bio}}></textarea>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="leave-btn" href="#">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+{{!-- interest modal --}}
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Update the Interests</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <label for="exampleDataList" class="form-label">Search for an interest</label>
+                <input class="form-control" name="interest" list="datalistOptions" id="interests"
+                    placeholder="interests">
+                <datalist id="datalistOptions">
+                    <option value="Cats">
+                    <option value="Tennis">
+                    <option value="Skateboarding">
+                    <option value="Video Games">
+                    <option value="Boba">
+                </datalist>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="leave-btn" href="#">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+{{!-- picture modal --}}
+<div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">add a photo</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <button id="upload_widget" class="cloudinary-button" type="button"></button>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="leave-btn" href="#">Save</button>
             </div>
         </div>
     </div>
