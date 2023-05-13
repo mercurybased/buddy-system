@@ -4,10 +4,8 @@
         <div class="col-md-4">
             <img src={{userData.photoUrl}} class="img-fluid ratio ratio-1x1 mx-auto  d-block rounded-circle"
                 alt="profile picture">
-            <button id="upload_widget" class="cloudinary-button" type="button">Add or change your profile
-                picture</button>
-                {{!-- A second button is shown that submits a "form", and that ubtton only 
-                shows when the url variable is !"" (not an empty string) --}}
+
+
         </div>
 
 
@@ -16,6 +14,24 @@
             <div class="card-body">
 
                 <h5 class="card-title">{{userData.firstName}} {{userData.lastName}}</h5>
+
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                        style="font-size: 30px;">Update My Profile
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                id="bioModal">Update
+                                Biography</a></li>
+                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2"
+                                id="interestModal">Update Interest</a></li>
+                        <li><a class="dropdown-item" href="#" id="upload_widget" style="background-color: none;">Update
+                                Profile Picture</a></li>
+                        {{!-- 
+                        <button id="upload_widget" class="cloudinary-button" type="button">Add or change your profile
+                            picture</button> --}}
+                    </ul>
+                </div>
 
                 <p class="card-text">Interests</p>
                 <p class="card-text"><small class="text-body-secondary">
@@ -35,20 +51,7 @@
                     </button>
                 </a>
 
-                <div class="dropdown">
-                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"
-                        style="font-size: 30px;">
-                        Update My Profile
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                id="bioModal">Update Biography</a></li>
-                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2"
-                                id="interestModal">Update Interest</a></li>
-                        <li><a class="dropdown-item" href="#" ata-bs-toggle="modal" data-bs-target="#exampleModal3"
-                                id="pictureModal">Update Profile Picture</a></li>
-                    </ul>
-                </div>
+
 
                 {{!-- <button id="upload_widget" class="cloudinary-button" type="button">Add a profile
                     picture</button> --}}
@@ -67,12 +70,12 @@
             </div>
             <div class="modal-body">
                 <form><textarea type="biography" id="biography" class="form-control"
-                        placeholder="write a little about yourself" value={{bio}}></textarea>
+                        placeholder="write a little about yourself" value={{biography}}></textarea>
                 </form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" id="leave-btn" href="#">Save</button>
+                <button type="button" class="btn btn-primary" id="bio-save-btn" href="#">Save</button>
             </div>
         </div>
     </div>
@@ -113,8 +116,12 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <button id="upload_widget" class="cloudinary-button" type="button"></button>
+
+                {{!-- A second button is shown that submits a "form", and that ubtton only 
+                                shows when the url variable is !"" (not an empty string) --}}
             </div>
+
+
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-primary" id="leave-btn" href="#">Save</button>
@@ -122,6 +129,7 @@
         </div>
     </div>
 </div>
+
 
 
 

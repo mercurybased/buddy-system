@@ -42,42 +42,64 @@ const form = document.querySelector("form");
 var myWidget = cloudinary.createUploadWidget({
     cloudName: 'de19jsefk',
     uploadPreset: 'wk5eacxt'
-  },
+},
     (error, result) => {
-      if (!error && result && result.event === "success") {
-        console.log('Done! Here is the image info: ', result.info);
-        url = result.info.url
-        console.log(url)
-        changePhoto()
+        if (!error && result && result.event === "success") {
+            console.log('Done! Here is the image info: ', result.info);
+            url = result.info.url
+            console.log(url)
+            changePhoto()
+        }
     }
-}
 )
 
 const changePhoto = async () => {
-     if (true) {
-        const response = await fetch ("/api/users/profile", {
+    if (true) {
+        const response = await fetch("/api/users/profile", {
             method: "PUT",
-            headers: { "Content-Type": "application/json"},
-            body: JSON.stringify ({
-                photoUrl:url
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                photoUrl: url
             })
         })
         console.log(response);
-    if (response.status === 200) {
-      window.location.assign("/profile")
-    } else {
-      alert("please choose a photo")
+        if (response.status === 200) {
+            window.location.assign("/profile")
+        } else {
+            alert("please choose a photo")
+        }
     }
-     }
 }
 
-  document.getElementById("upload_widget").addEventListener("click", function () {
+document.getElementById("upload_widget").addEventListener("click", function () {
     myWidget.open();
   }, false);
+  
+
+  const changeBio = async () => {
+    const biography = document.getElementById('biography').value;
+    console.log(biography);
+      if (true) {
+          const response = await fetch ("/api/users/profile/bio", {
+           method: "PUT",
+           headers: { "Content-Type": "application/json"},
+           body: JSON.stringify ({
+               biography:biography
+           })
+       })
+       console.log(response);
+       if (response.status === 200) {
+           window.location.assign("/profile")
+        } else {
+            alert("please enter something or exit out")
+   }
+}
+}
 // leave button 
-const myModalAlternative = new bootstrap.Modal('#bioModal', options)
-const myModalAlternative2 = new bootstrap.Modal('#interestModal', options)
-const myModalAlternative3 = new bootstrap.Modal('#pictureModal', options)
+const myModalAlternative = new bootstrap.Modal('#bioModal', {backdrop: "static"} )
+const myModalAlternative2 = new bootstrap.Modal('#interestModal', {backdrop: "static"})
+// const myModalAlternative3 = new bootstrap.Modal('#pictureModal', {backdrop: "static"})
+document.getElementById("bio-save-btn").addEventListener("click", changeBio)
 
 // const exampleModal = document.getElementById('exampleModal')
 // if (exampleModal) {
