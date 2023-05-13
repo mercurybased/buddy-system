@@ -1,10 +1,9 @@
 <div class="card mb-3"
     style="max-width: 100%; background: rgba(255, 255, 255, 0); border-radius: 16px; box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(1.7px);-webkit-backdrop-filter: blur(1.7px);border: 1px solid rgba(255, 255, 255, 0.03);">
     <div class="row g-0">
-        <div class="col-md-4">
-            <img src={{userData.photoUrl}} class="img-fluid ratio ratio-1x1 mx-auto  d-block rounded-circle"
-                alt="profile picture">
-
+        <div class="col-md-4 my-auto mx-auto justify-content-center">
+            <img src={{userData.photoUrl}} class="mx-auto d-block rounded-circle" alt="profile picture"
+                style="height: 450px; width: 450px;">
 
         </div>
 
@@ -27,9 +26,6 @@
                                 id="interestModal">Update Interest</a></li>
                         <li><a class="dropdown-item" href="#" id="upload_widget" style="background-color: none;">Update
                                 Profile Picture</a></li>
-                        {{!-- 
-                        <button id="upload_widget" class="cloudinary-button" type="button">Add or change your profile
-                            picture</button> --}}
                     </ul>
                 </div>
 
@@ -37,8 +33,6 @@
                 <p class="card-text"><small class="text-body-secondary">
                         <ul>
                             {{userData.interest.interest}}
-                            {{!-- <li>{{interest}}</li> --}}
-                            {{!-- {{/each}} --}}
                         </ul>
                     </small>
                 </p>
