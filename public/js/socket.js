@@ -6,6 +6,10 @@ var input = document.getElementById('message');
 
 saveBtn.addEventListener('click', function(e) {
   if (input.value) {
+    const data = {
+      const message: input.value;
+      const user: 
+    }
     socket.emit('chat message', input.value);
     input.value = '';
   }
