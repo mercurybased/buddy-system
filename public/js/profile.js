@@ -95,11 +95,31 @@ document.getElementById("upload_widget").addEventListener("click", function () {
    }
 }
 }
+  const changeInterest = async () => {
+    const interest = document.getElementById('interest').value;
+    console.log(biography);
+      if (true) {
+          const response = await fetch ("/api/users/profile/interest", {
+           method: "PUT",
+           headers: { "Content-Type": "application/json"},
+           body: JSON.stringify ({
+               interest:interest
+           })
+       })
+       console.log(response);
+       if (response.status === 200) {
+           window.location.assign("/profile")
+        } else {
+            alert("please enter something or exit out")
+   }
+}
+}
 // leave button 
 const myModalAlternative = new bootstrap.Modal('#bioModal', {backdrop: "static"} )
 const myModalAlternative2 = new bootstrap.Modal('#interestModal', {backdrop: "static"})
 // const myModalAlternative3 = new bootstrap.Modal('#pictureModal', {backdrop: "static"})
 document.getElementById("bio-save-btn").addEventListener("click", changeBio)
+document.getElementById("int-save-btn").addEventListener("click", changeInterest)
 
 // const exampleModal = document.getElementById('exampleModal')
 // if (exampleModal) {

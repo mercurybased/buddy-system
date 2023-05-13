@@ -86,6 +86,35 @@ router.put("/profile/bio", async (req, res) => {
 });
 
 
+router.post("/profile/interest", async (req, res) => {
+  try {
+  const interest = await Interest.findOne({interest: req.body.interest},  {where: { id: req.session.user_id }})
+    let newInterest;
+    if (!interest){
+      newInterest = await Interest.create({
+        // user_id: newUser.id
+        interest: req.body.interest,
+      });   
+    };
+    res.status(200).json(newInterest);
+  } catch (err) {
+    console.log(err);
+    res.status(400).json(err);
+  }
+});
+
+router.put("/profile/interest", async (req, res) => {
+  try {   
+    await User.update({ interest: req.body.interest }, { where: { id: req.session.user_id } });
+    const user = await User.update({ interest: req.body.interest }, { where: { id: req.session.user_id } });
+    console.log(user)
+    res.status(200).json(user);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json(error);
+  }
+});
+
 
 
 router.post("/login", async (req, res) => {
