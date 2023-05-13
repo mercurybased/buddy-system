@@ -41,7 +41,10 @@ const form = document.querySelector("form");
 
 var myWidget = cloudinary.createUploadWidget({
     cloudName: 'de19jsefk',
-    uploadPreset: 'wk5eacxt'
+    uploadPreset: 'wk5eacxt',
+    cropping: 'true',
+    croppingCoordinatesMode: 'custom',
+    showSkipCropButton: 'false',
 },
     (error, result) => {
         if (!error && result && result.event === "success") {
@@ -73,31 +76,31 @@ const changePhoto = async () => {
 
 document.getElementById("upload_widget").addEventListener("click", function () {
     myWidget.open();
-  }, false);
-  
+}, false);
 
-  const changeBio = async () => {
+
+const changeBio = async () => {
     const biography = document.getElementById('biography').value;
     console.log(biography);
-      if (true) {
-          const response = await fetch ("/api/users/profile/bio", {
-           method: "PUT",
-           headers: { "Content-Type": "application/json"},
-           body: JSON.stringify ({
-               biography:biography
-           })
-       })
-       console.log(response);
-       if (response.status === 200) {
-           window.location.assign("/profile")
+    if (true) {
+        const response = await fetch("/api/users/profile/bio", {
+            method: "PUT",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                biography: biography
+            })
+        })
+        console.log(response);
+        if (response.status === 200) {
+            window.location.assign("/profile")
         } else {
             alert("please enter something or exit out")
-   }
-}
+        }
+    }
 }
 // leave button 
-const myModalAlternative = new bootstrap.Modal('#bioModal', {backdrop: "static"} )
-const myModalAlternative2 = new bootstrap.Modal('#interestModal', {backdrop: "static"})
+const myModalAlternative = new bootstrap.Modal('#bioModal', { backdrop: "static" })
+const myModalAlternative2 = new bootstrap.Modal('#interestModal', { backdrop: "static" })
 // const myModalAlternative3 = new bootstrap.Modal('#pictureModal', {backdrop: "static"})
 document.getElementById("bio-save-btn").addEventListener("click", changeBio)
 
