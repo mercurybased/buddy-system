@@ -16,38 +16,42 @@ const popperInstance = Popper.createPopper(button, tooltip, {
 });
 
 function show() {
-tooltip.setAttribute('data-show', '');
+  tooltip.setAttribute('data-show', '');
 
-// We need to tell Popper to update the tooltip position
-// after we show the tooltip, otherwise it will be incorrect
-popperInstance.update();
+  // We need to tell Popper to update the tooltip position
+  // after we show the tooltip, otherwise it will be incorrect
+  popperInstance.update();
 }
 
 function hide() {
-tooltip.removeAttribute('data-show');
+  tooltip.removeAttribute('data-show');
 }
 
 const showEvents = ['mouseenter', 'focus'];
 const hideEvents = ['mouseleave', 'blur'];
 
 showEvents.forEach((event) => {
-button.addEventListener(event, show);
+  button.addEventListener(event, show);
 });
 
 hideEvents.forEach((event) => {
-button.addEventListener(event, hide);
+  button.addEventListener(event, hide);
 });
 
 
 function myFunction() {
   document.getElementById("background-image").
-  style.backgroundImage =rl("../Assets/white\ leaf\ shadow\ bg.png");
+    style.backgroundImage = rl("../Assets/white\ leaf\ shadow\ bg.png");
 }
 
 
 var myWidget = cloudinary.createUploadWidget({
   cloudName: 'de19jsefk',
-  uploadPreset: 'wk5eacxt'
+  uploadPreset: 'wk5eacxt',
+  cropping: 'true',
+  croppingCoordinatesMode: 'custom',
+  showSkipCropButton: 'false',
+
 },
   (error, result) => {
     if (!error && result && result.event === "success") {
@@ -82,7 +86,7 @@ const signup = async (e) => {
         url
       }),
     });
-console.log(response);
+    console.log(response);
     if (response.status === 200) {
       window.location.assign("/profile")
     } else {
