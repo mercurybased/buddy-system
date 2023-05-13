@@ -192,12 +192,22 @@ h2.home {
 #tooltip[data-popper-placement^='bottom']>#arrow {
   top: -4px;
 }
+<<<<<<< HEAD
+
+#upload_widget {
+  background-color: #BEB4AA;
+  border: solid 2px #ffff;
+  color: black;
+}
+
+=======
 
 /* #upload_widget {
     background-color: #BEB4AA;
     border: solid 2px #ffff;
     color: black; */
 /* } */
+>>>>>>> dev
 #arrow::before {
   visibility: visible;
   content: '';
