@@ -7,8 +7,9 @@ var input = document.getElementById('message');
 saveBtn.addEventListener('click', function(e) {
   if (input.value) {
     const data = {
-      const message: input.value;
-      const user: 
+      // const message = input.value,
+      // const user: 
+      // create an object to pass user name data
     }
     socket.emit('chat message', input.value);
     input.value = '';
@@ -21,6 +22,7 @@ socket.on('chat message', function(msg) {
   var item = document.createElement('li');
   item.textContent = msg;
   messages.appendChild(item);
+  // append data here for user name
   //window.scrollTo(0, document.body.scrollHeight);
 });
 
