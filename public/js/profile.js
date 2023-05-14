@@ -97,7 +97,9 @@ const changeBio = async () => {
             alert("please enter something or exit out")
         }
     }
-}
+};
+
+//changing interest
   const changeInterest = async () => {
     const interest = document.getElementById('interest').value;
     console.log(biography);
