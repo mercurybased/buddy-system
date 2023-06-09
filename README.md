@@ -1,6 +1,12 @@
 # chingu talk
 an aplication for finding people near you with similar interest
 
+## Deployed Link
+https://chingutalk.herokuapp.com/
+
+## Presentation 
+https://www.canva.com/design/DAFi9alGd5A/y4QJsbwrKmEwYtT2NYZ8eA/view?utm_content=DAFi9alGd5A&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink
+
 ## Table of Contents
 
 - [Description](#📝-description)
